@@ -1,0 +1,57 @@
+
+{extend name="common/index" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/netShop.css" />
+{/block}
+{block name="main"}
+<div style="height: 50px;"></div>
+<div id="banner" class="banner">
+    <img src="__PUBLIC__/{$top.pic}" />
+</div>
+<div id="shop">
+    <div class="shopTitle">
+        <ul>
+            <li>
+                <p>网上商城</p>
+            </li>
+            <li>
+                <img src="__HOME__/img/eShop.png" class="img-responsive center-block" />
+            </li>
+        </ul>
+    </div>
+    <div class="shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="shopBox">
+                        <div class="leftContent floatl">
+                            <ul>
+                                <li>
+                                    <p>{$data.title}</p>
+                                </li>
+                                <li>
+                                    <p>{$data.content}</p>
+                                </li>
+                                <li>
+                                    <a class="lookMore" target="_blank" href="https://list.tmall.com/search_product.htm?q=%CB%E6%CF%EB%C7%FA&type=p&vmarket=&spm=875.7931836%2FB.a2227oh.d100&from=mallfp..pc_1_searchbutton">进入天猫商城</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rightPIc floatr">
+                            <img src="__HOME__/img/mall.jpg" class="floatr" />
+                            <div class="clearr"></div>
+                        </div>
+                        <div class="clearboth"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="footer"}
+
+{include file="public/footer2" /}
+
+{/block}

@@ -1,0 +1,128 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/project.css">
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+        <div class="content">
+            <p class="back"><a href="{:url('Project/index')}"><img src="__HOME__/images/left.png" alt=""><br/>BACK</a></p>
+            <div class="banner">
+                <div class="swiper-container" id="banner">
+                    <div class="swiper-wrapper" id="swiper-wrapper">
+                        {volist name="img" id="vo"}
+                        <div class="swiper-slide">
+                            <div class="box" style="background: url('__PUBLIC__/{$vo}');"></div>
+                        </div>
+                        {/volist}
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="introduce">
+                <table cellspacing="0">
+                    <tr>
+                        <td>location</td>
+                        <td>{$data.location}</td>
+                        <td>date</td>
+                        <td>{$data.date}</td>
+                        <td>type</td>
+                        <td>{$data.type}</td>
+                    </tr>
+                    <tr>
+                        <td>clients</td>
+                        <td>{$data.clients}</td>
+                        <td>status</td>
+                        <td>{$data.is_status}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="explain">
+                <div class="essay">
+                    <div class="swiper-container" id="essay">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                {$data.content}
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="essay-title">
+                    <p class="title" data-scroll-reveal="enter right after 0.5s">{$data.en_title}</p>
+                    <p class="small-title" data-scroll-reveal="enter bottom over 1s and move 100px">{$data.title}</p>
+                </div>
+            </div>
+        </div>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript">
+    window.onload = function() {
+        var vm = new Vue({
+            el: "#container",
+            data: {
+                data:'sdfsfd'
+            },
+            methods: {
+                myswiper: function(domId) {
+                    var swiper = new Swiper(domId, {
+                        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        observeParents: true, //修改swiper的父元素时，自动初始化swiper
+                        speed: 1000,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        mousewheel: true,
+                    });
+                },
+                myscroll: function(domId) {
+                    var scroll = new Swiper(domId, {
+                        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        observeParents: true, //修改swiper的父元素时，自动初始化swiper
+                        direction: 'vertical',
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        scrollbar: {
+                            el: domId + ' .swiper-scrollbar',
+                            draggable: true,
+                            snapOnRelease: false,
+
+                        },
+                        mousewheel: {
+                            releaseOnEdges: false,
+                        },
+
+                    });
+                },
+                checkHeight: function() {
+                    var w = document.getElementById('swiper-wrapper').offsetWidth;
+                    document.getElementById('banner').style.height = w / 16 * 10 + 'px';
+                }
+            }
+        });
+        vm.$nextTick(function() {
+            this.checkHeight();
+            this.myswiper("#banner");
+            this.myscroll("#essay");
+            window.onresize = function() {
+                vm.checkHeight();
+            }
+            if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+                (function() {
+                    window.scrollReveal = new scrollReveal({ reset: true });
+                })();
+            };
+
+        })
+
+    }
+</script>
+{/block}

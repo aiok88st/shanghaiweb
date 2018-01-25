@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="{$info.key}">
+    <meta name="description" content="{$info.des}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <script src="__HOME__/js/lib/vue.min.js"></script>
+    <script src="__HOME__/js/lib/swiper.min.js"></script>
+    <script src="__HOME__/js/lib/swiper.animate1.0.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+    {block name="headers"}
+    {/block}
+
+</head>
+<body>
+<div id="container">
+    <!-- 顶部导航 -->
+    <div class="nav-container">
+        <div class="logo flex-center-vertically"><a href="{:url('home/index/index')}"><img src="__PUBLIC__{$sArr.logo}" alt=""></a></div>
+        <ul class="nav-title">
+            {volist name="nav" id="vo"}
+            <li class="flex-center-vertically"><a href="{$vo.url}">{$vo.catname}</a></li>
+            {/volist}
+
+        </ul>
+    </div>
+
+
+    {block name="main"}
+
+    {/block}
+    {block name="footer"}
+
+    {/block}

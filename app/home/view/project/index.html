@@ -1,0 +1,63 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/program.css">
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+        <div class="content">
+            <div class="swiper-container" id="projects">
+                <div class="swiper-wrapper">
+                    {volist name="art" id="vo"}
+                    <div class="swiper-slide">
+                        <a href="{:url('Project/detail')}?id={$vo.id}" class="box" style="background: url('__PUBLIC__/{$vo.thumb}');">
+                            <div class="introduce flex-center-vertically">
+                                <p class="title">{$vo.en_title}</p>
+                                <p class="small-title">{$vo.title}</p>
+                                <p class="more">READ MORE...</p>
+                            </div>
+                        </a>
+                    </div>
+                    {/volist}
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript">
+    window.onload = function() {
+        var vm = new Vue({
+            el: "#container",
+            data: {
+
+            },
+            methods: {
+                swiper: function(domId) {
+                    var swiper = new Swiper(domId, {
+                        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        observeParents: true, //修改swiper的父元素时，自动初始化swiper
+                        speed: 1000,
+                        slidesPerView: 3,
+                        slidesPerColumn: 2,
+                        slidesPerColumnFill: 'row',
+                        navigation: {
+                            nextEl: domId + ' .swiper-button-next',
+                            prevEl: domId + ' .swiper-button-prev',
+                        },
+                        mousewheel: true,
+                    });
+                }
+            }
+        });
+        vm.$nextTick(function() {
+            this.swiper("#projects");
+        });
+    }
+</script>
+{/block}

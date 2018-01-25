@@ -1,0 +1,48 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/contact.css">
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+        <div class="content">
+            <div class="content-top">
+                <div class="info">
+                    <ul class="tel">
+                        <li>+{$sArr.tel}「T」</li>
+                        <li>+{$sArr.phone}「F」</li>
+                    </ul>
+                    <ul class="email">
+                        <li>{$sArr.email}</li>
+                    </ul>
+                    <p class="address">
+                        {$sArr.ads}
+                        <br> Zip Code：{$sArr.youbian}
+                    </p>
+                </div>
+                <div class="logo flex-center-vertically">
+                    <img src="__PUBLIC__{$art['k0']['thumb']}" alt="">
+                </div>
+                <div class="info2">
+                    <ul class="wechat">
+                        <li>Sina Weibo:
+                            <br/>{$sArr.fax}
+                            <br/>Wechat: {$sArr.wchat}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-bottom" style="background: url('__PUBLIC__{$img[0]}');">
+                <div class="two-dimension-code">
+                    <ul class="picture">
+                        <li><img src="__PUBLIC__{$sArr.wxpic}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+
+
+{/block}

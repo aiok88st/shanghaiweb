@@ -1,0 +1,65 @@
+{extend name="common/index" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/product.css" />
+{/block}
+{block name="main"}
+
+<div style="height: 50px;"></div>
+<div id="banner1" class="banner">
+    <img src="__PUBLIC__/{$top.pic}" />
+</div>
+<div id="produce">
+    <div class="proTitle">
+        <ul>
+            <li>
+                <p>产品搜索</p>
+            </li>
+            <li>
+                <img src="__HOME__/img/proCenter.png" class="center-block img-responsive"/>
+            </li>
+        </ul>
+    </div>
+    <div class="proNavBox">
+
+    </div>
+    <div class="proList">
+        <div class="container">
+            <div class="row" id="proListRow">
+                {if condition="$data"}
+                {volist name="data" id="v1"}
+                <div class="col-xs-6 col-sm-4 col-md-4" onclick="window.location.href='{:url('products/productDetails')}?catid=21&id={$v1.id}'">
+                    <div class="picBox">
+                        <img src="__PUBLIC__/{$v1["thumb"]}" class="img-responsive"/>
+                        <div class="picOn" onclick="window.location.href='{:url('Products/productDetails')}?id={$v1.id}'">
+                            <p>{$v1["title"]}</p>
+                            <a href="javascript:;"><img src="__HOME__/img/right.png"  class="center-block"/></a>
+                        </div>
+                        <p class="picTow">{$v1["title"]}</p>
+                    </div>
+                </div>
+                {/volist}
+                {else /}
+
+                <div class="col-xs-6 col-sm-4 col-md-4 nomore">
+                    <img src="__HOME__/img/nomore.png" alt="">
+                    <p>没有更多</p>
+                </div>
+                {/if}
+
+            </div>
+        </div>
+    </div>
+    <div class="page" align="center">
+        {$page}
+    </div>
+    <script type="text/javascript">
+
+
+    </script>
+</div>
+{/block}
+
+{block name="footer"}
+{include file="public/footer2" /}
+<script type="text/javascript" src="__HOME__/js/proNav.js"></script>
+{/block}

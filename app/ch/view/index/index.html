@@ -1,0 +1,311 @@
+{extend name="common/index" /}
+
+{block name="main"}
+<div id="banner">
+	<div class="swiper-container swiper-container-main">
+		<div class="swiper-wrapper">
+
+			{volist name='top' id='v1'}
+			<div class="swiper-slide">
+				<img src="__PUBLIC__/{$v1["pic"]}" />
+			</div>
+			{/volist}
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
+</div>
+<div id="aboutUs">
+	<div class="container aboutUs">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-0">
+				<div class="auBanner">
+					<div class="swiper-container swiper-container-au">
+						<div class="swiper-wrapper">
+							{volist name='about' id='v2'}
+							<div class="swiper-slide">
+								<img src="__PUBLIC__/{$v2["pic"]}" />
+							</div>
+							{/volist}
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0">
+				<div class="usContent">
+					<div class="usTitle">
+						<p>关于我们</p>
+						<img src="__HOME__/img/usTitle.png" class="img-responsive"/>
+					</div>
+					<div class="usName">
+						<p>{$abus["title"]}</p>
+						<p></p>
+					</div>
+					<div class="usDetails">
+						<p>{$abus["description"]}</p>
+					</div>
+					<div>
+						<a class="lookMore" href="{:url('ch/about/index')}">查看更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img src="__HOME__/img/auBkg.png" />
+	</div>
+</div>
+<div id="serve">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4">
+				<div class="serBox">
+					<ul>
+						<li>
+							<img src="__HOME__/img/oem.png" class="img-responsive" />
+						</li>
+						<li>
+							<a href="###">OEM&#38;ODM</a>
+							<span></span>
+						</li>
+						<li>
+							<p>随想曲拥有专业的技术设计和开发人员，多年的生产经营也积累丰富的OEM和ODM代加工经验。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4">
+				<div class="serBox">
+					<ul>
+						<li>
+							<img src="__HOME__/img/person.png" class="img-responsive"/>
+						</li>
+						<li>
+							<a href="###">个性化定制服务</a>
+							<span></span>
+						</li>
+						<li>
+							<p>随想曲能满足您所有的推广业务需求，为您定制属个性化的产品，您可以在随想曲购买到任何您需要的产品。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4">
+				<div class="serBox">
+					<ul>
+						<li>
+							<img src="__HOME__/img/manage.png" class="img-responsive"/>
+						</li>
+						<li>
+							<a href="###">OEM&#38;ODM</a>
+							<span></span>
+						</li>
+						<li>
+							<p>随想曲拥有先进的生产体系，完整的库存管控系统，确保货源稳定，全线产品存库充足，没有起订量要求。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="produce">
+	<div class="proTitle">
+		<ul>
+			<li>
+				<p>产品中心</p>
+			</li>
+			<li>
+				<img src="__HOME__/img/proCenter.png" class="center-block img-responsive"/>
+			</li>
+		</ul>
+	</div>
+	<div class="proNavBox">
+		<div class="proNav" align="center">
+
+			<ul>
+				<li class="">
+					<a href="javascript:;" onclick="changeproduct('',this)" class="proNavActive" >全部</a>
+				</li>
+				{volist name='productNav' id='v3'}
+				<li class="">
+					<a href="javascript:;" onclick="changeproduct('{$v3.id}',this)">{$v3["catname"]}</a>
+				</li>
+				{/volist}
+
+			</ul>
+
+		</div>
+        <div id="topNav" class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide active" onclick="changeproduct('',this)"><span>全部</span></div>
+                {volist name='productNav' id='v3'}
+                <div class="swiper-slide" onclick="changeproduct('{$v3.id}',this)"><span>{$v3["catname"]}</span></div>
+                {/volist}
+                <div class="swiper-slide"></div>
+            </div>
+        </div>
+	</div>
+
+	<div class="proList">
+		<div class="container">
+			<div class="row" id="proListRow">
+                {if condition="$pArr"}
+                    {volist name='pArr' id='v4'}
+                    <div class="col-xs-6 col-sm-4 col-md-4" onclick="window.location.href='{:url('products/productDetails')}?catid=10&id={$v4.id}'">
+                        <div class="picBox">
+                            <img src="__PUBLIC__/{$v4["thumb"]}" class="img-responsive"/>
+                            <div class="picOn">
+                                <p>{$v4["title"]}</p>
+                                <a target="_blank" href="{:url('products/productDetails')}?catid=10&id={$v4.id}"><img src="__HOME__/img/right.png"  class="center-block"/></a>
+                            </div>
+                            <p class="picTow">{$v4["title"]}</p>
+                        </div>
+                    </div>
+                    {/volist}
+                {else /}
+                <div class="col-xs-6 col-sm-4 col-md-4 nomore">
+                    <img src="__HOME__/img/nomore.png" alt="">
+                    <p>没有更多</p>
+                </div>    
+                {/if}
+				
+			</div>
+		</div>
+		<div class="proMore">
+			<a class="lookMore" href="{:url('ch/products/index')}">查看更多</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function changeproduct(id,obj){
+		$.ajax({
+			url:"products/"+id,
+			type:"post",
+			data:{"id":id},
+			dataType:"json",
+			success:function(re){
+			    $('.proNav').find('a').removeClass('proNavActive');
+			    $(obj).addClass('proNavActive');
+				productList = re;
+
+				var html="";
+				var list=productList.list;
+				if(list.length>=1){
+                    for(item in list){
+                        html +='<div class="col-xs-6 col-sm-4 col-md-4">';
+                        html +='<div class="picBox">';
+                        html +='<img src="__PUBLIC__/'+list[item].thumb+'" class="img-responsive"/>';
+                        html +='<div class="picOn">';
+                        html +='<p>'+list[item].title+'</p>';
+                        html +='<a target="_blank" href="{:url("Products/productDetails")}?id='+list[item].id+'"><img src="__HOME__/img/right.png"  class="center-block"/></a>';
+                        html +='</div>';
+						html +='<p class="picTow">'+list[item].title+'</p>';
+						html +='</div></div>';
+                    }
+                }else{
+                    html +='<div class="col-xs-6 col-sm-4 col-md-4 nomore">';
+                    html +='<img src="__HOME__/img/nomore.png" alt=""> <p>没有更多</p></div>';
+                }
+
+				$('#proListRow').html(html);
+			}
+		});
+	}
+</script>
+
+<div id="meeting">
+	<div class="mtTitle">
+		<ul>
+			<li>
+				<p>历届展会</p>
+			</li>
+			<li>
+				<img src="__HOME__/img/meeting.png" class="img-responsive center-block"/>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="mtPicShow">
+		<div class="container">
+			<div class="row">
+                {if condition="$artArr"}
+                {volist name='artArr' id='v5'}
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <div class="mtPicBox">
+                        <a href="{:url('ch/exhibition/detail',['id'=>$v5['id']])}" ><img src="__PUBLIC__/{$v5["thumb"]}" class="img-responsive" /></a>
+                        <div class="mtOn">
+                            <div class="floatl">
+                                <div class="mtBorder">
+                                    {volist name="v5.time" id="v" key="k"}
+                                    <ul>
+                                        <li>
+                                            {if condition="$k eq 3"}<p>{$v}</p>{/if}
+                                        </li>
+                                        <li>
+                                            {if condition="$k eq 2"}
+                                            <p>
+                                                {switch name="$v" }
+                                                {case value="01"}Jan.{/case}
+                                                {case value="02"}Feb.{/case}
+                                                {case value="03"}Mar.{/case}
+                                                {case value="04"}Apr.{/case}
+                                                {case value="05"}May.{/case}
+                                                {case value="06"}Jun.{/case}
+                                                {case value="07"}Jul.{/case}
+                                                {case value="08"}Aug.{/case}
+                                                {case value="09"}Sep.{/case}
+                                                {case value="10"}Oct.{/case}
+                                                {case value="11"}Nov.{/case}
+                                                {default /}Dec.
+                                                {/switch}
+                                            </p>
+                                            {/if}
+                                        </li>
+
+                                    </ul>
+                                    {/volist}
+                                </div>
+                            </div>
+                            <div class="floatl">
+                                <ul>
+                                    <li>
+                                        <p><nobr>{$v5["title"]}</nobr></p>
+                                    </li>
+                                    <li>
+                                        <p>{$v5["contentdes"]}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clearl"></div>
+                        </div>
+                    </div>
+                </div>
+                {/volist}
+                {else /}
+                <div class="col-xs-6 col-sm-4 col-md-4 nomore">
+                    <img src="__HOME__/img/nomore.png" alt="">
+                    <p>没有更多</p>
+                </div>
+                {/if}
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="mtMore">
+		<a class="lookMore" href="{:url('ch/exhibition/index')}?catid=3">查看更多</a>
+	</div>
+</div>
+{/block}
+
+{block name="footer"}
+{include file="public/footer" /}
+<script type="text/javascript" src="__HOME__/js/proNav.js"></script>
+{/block}
+
+

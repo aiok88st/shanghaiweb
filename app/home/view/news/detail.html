@@ -1,0 +1,85 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/event.css">
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+        <div class="content">
+            <div class="detail">
+                <a href="{:url('News/index')}" class="back"><img src="__HOME__/images/left.png" alt=""><br/>BACK</a>
+                <p class="title">{$data.title}</p>
+                <p class="time">{$data.createtime|date="Ym",###}</p>
+                <div class="swiper-container content-box" id="details">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            {$data.content}
+                        </div>
+                    </div>
+                    <!-- Add Scroll Bar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div class="photos">
+                <div class="swiper-container" id="photos">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                {volist name="img" id="vo"}
+                                <li><img src="__PUBLIC__{$vo}" alt=""></li>
+                                {/volist}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add Scroll Bar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript">
+    window.onload = function() {
+
+        var vm = new Vue({
+            el: "#container",
+            data: {
+
+            },
+            methods: {
+                swiper: function(domId) {
+                    var swiper = new Swiper(domId, {
+                        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        observeParents: true, //修改swiper的父元素时，自动初始化swiper
+                        direction: 'vertical',
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        scrollbar: {
+                            el: domId + ' .swiper-scrollbar',
+                            draggable: true,
+                            snapOnRelease: false,
+                        },
+                        mousewheel: true,
+                    });
+                },
+                checkHeight: function() {
+                    var h1 = document.getElementsByClassName('detail')[0].offsetHeight;
+                    var h2 = document.getElementsByClassName('footer')[0].offsetHeight;
+                    var h3 = document.getElementsByClassName('nav-container')[0].offsetHeight;
+                    document.getElementsByClassName('content-box')[0].style.height = h1 - 245-h2 + 'px';
+                }
+            }
+        });
+        vm.$nextTick(function() {
+            this.checkHeight();
+            this.swiper("#details");
+            this.swiper("#photos");
+            window.onresize = function() {
+                vm.checkHeight();
+            }
+        })
+    }
+</script>
+{/block}

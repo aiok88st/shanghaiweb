@@ -1,0 +1,89 @@
+{extend name="common/index" /}
+{block name="headers"}
+<link rel="stylesheet" href="__HOME__/css/meeting.css" />
+{/block}
+{block name="main"}
+<div style="height: 50px;"></div>
+<div id="banners" class="banner">
+    <img src="__PUBLIC__/{$top.pic}" />
+</div>
+<div id="meeting">
+    <div class="mtTitle">
+        <ul>
+            <li>
+                <p>历届展会</p>
+            </li>
+            <li>
+                <img src="__HOME__/img/meeting.png" class="img-responsive center-block"/>
+            </li>
+        </ul>
+    </div>
+    <div class="mtPicShow">
+        <div class="container">
+            <div class="row">
+
+                {volist name="list" id="v1"}
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
+                    <div class="mtPicBox">
+                        <a href="{:url('ch/exhibition/detail',['id'=>$v1['id']])}" ><img src="__PUBLIC__/{$v1["thumb"]}" class="img-responsive" /></a>
+                        <div class="mtOn">
+                            <div class="floatl">
+                                <div class="mtBorder">
+                                    {volist name="v1.time" id="v" key="k"}
+                                    <ul>
+                                        <li>
+                                            {if condition="$k eq 3"}<p>{$v}</p>{/if}
+                                        </li>
+                                        <li>
+                                            {if condition="$k eq 2"}
+                                            <p>
+                                             {switch name="$v" }
+                                             {case value="01"}Jan.{/case}
+                                             {case value="02"}Feb.{/case}
+                                             {case value="03"}Mar.{/case}
+                                             {case value="04"}Apr.{/case}
+                                             {case value="05"}May.{/case}
+                                             {case value="06"}Jun.{/case}
+                                             {case value="07"}Jul.{/case}
+                                             {case value="08"}Aug.{/case}
+                                             {case value="09"}Sep.{/case}
+                                             {case value="10"}Oct.{/case}
+                                             {case value="11"}Nov.{/case}
+                                             {default /}Dec.
+                                             {/switch}
+                                            </p>
+                                            {/if}
+                                        </li>
+                                    </ul>
+                                    {/volist}
+                                </div>
+                            </div>
+                            <div class="floatl">
+                                <ul>
+                                    <li>
+                                        <p><nobr>{$v1["title"]}</nobr></p>
+                                    </li>
+                                    <li>
+                                        <p>{$v1["contentdes"]}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clearl"></div>
+                        </div>
+                    </div>
+                </div>
+                {/volist}
+
+
+            </div>
+        </div>
+    </div>
+    <div class="page" align="center">
+        {$page}
+    </div>
+</div>
+{/block}
+
+{block name="footer"}
+{include file="public/footer2" /}
+{/block}
