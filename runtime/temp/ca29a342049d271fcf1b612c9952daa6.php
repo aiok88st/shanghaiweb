@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:55:"F:\wamp\www\shanghaiweb/app/admin\view\index\index.html";i:1516708684;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\head.html";i:1516708701;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\foot.html";i:1512625649;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:55:"F:\wamp\www\shanghaiweb/app/admin\view\index\index.html";i:1516957447;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\head.html";i:1516708701;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\foot.html";i:1512625649;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +25,7 @@
         <div class="layui-main">
             <div class="admin-login-box">
                 <a class="logo" style="left: 0;" href="<?php echo url('admin/index/index'); ?>">
-                    <span style="font-size: 22px;">后台管理系统</span>
+                    <span><img src="__ADMIN__/images/logo.png" width="155px"></span>
                 </a>
                 <div class="admin-side-toggle fs1">
                     <span class="icon icon-menu"></span>
@@ -95,7 +95,7 @@
         <div class="layui-main">
 
             <p>2017 &copy;
-                <a href="###">随想曲官网后台</a>
+                <a href="###">上海李俊设计资讯有限公司</a>
             </p>
         </div>
     </div>

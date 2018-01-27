@@ -1,0 +1,95 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/profile.css" />
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+		<div id="about" style="background: url('__PUBLIC__/{$art['k0']['thumb']}') no-repeat top center;">
+			<div class="box about">
+				<div class="aboutTitle">
+					<p>{$art['k0']['title']}</p>
+				</div>
+				<div class="aboutContent">
+                    {$art['k0']['content']}
+                </div>
+				<div class="aboutTitle work">
+					<p>{$art['k0']['en_title']}</p>
+				</div>
+				<div class="process">
+					<ul>
+						<li>
+							<a href="###">
+								<p>meet</p>
+								<p>&amp;</p>
+								<p>agree</p>
+							</a>
+						</li>
+						<li>
+							<a href="###">
+								<p>idea</p>
+								<p>&amp;</p>
+								<p>concept</p>
+							</a>
+						</li>
+						<li>
+							<a href="###">
+								<p>design</p>
+								<p>&amp;</p>
+								<p>create</p>
+							</a>
+						</li>
+						<li>
+							<a href="###">
+								<p>build</p>
+								<p>&amp;</p>
+								<p>construction</p>
+							</a>
+						</li>
+					</ul>
+					<div class="clearl"></div>
+				</div>
+				<div class="aboutContent">
+                    {$art['k0']['desc']}
+                </div>
+			</div>
+		</div>
+		<div id="introduce" class="box">
+            {volist name="img" id="vo"}
+			<img src="__PUBLIC__{$vo}" />
+            {/volist}
+		</div>
+		<div id="team" class="box">
+			<div class="tTitle">
+				<p>MEET OUR FEARLESS TEAM</p>
+				<p>-&nbsp;&nbsp;J&amp;P Designers&nbsp;&nbsp;-</p>
+			</div>
+			<div class="teamBox">
+                {volist name="team" id="vo" key="i"}
+				<img src="__PUBLIC__{$vo.thumb}" />
+                {/volist}
+
+				<div class="clearl"></div>
+			</div>
+		</div>
+		<div id="company" class="box">
+			<div class="floatl cpLeft">
+				<p>CLIENT</p>
+				<nobr><p>「 排名不分先后 」</p></nobr>	
+			</div>
+			<div class="floatl cpRight">
+                {volist name="hz_team" id="vo" key="i"}
+				<p>{$vo.en_title} {$vo.title}</p>
+                {/volist}
+
+			</div>
+			<div class="clearl"></div>
+		</div>
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript" src="__MOBILE__/js/scrollReveal.js" ></script>
+<script type="text/javascript" src="__MOBILE__/js/profile.js" ></script>
+
+{/block}

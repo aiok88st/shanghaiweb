@@ -1,0 +1,33 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/projects.css" />
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+		<div id="mainImg">
+
+            {volist name="art" id="vo"}
+			 <div class="mainImgBox" isOpen="false">
+			 	<img src="__PUBLIC__/{$vo.thumb}" />
+			 	<a href="{:url('Project/detail')}?id={$vo.id}" style="display: none;">
+			 		<p>{$vo.en_title}</p>
+			 		<p>{$vo.title}</p>
+			 		<span>READ MORE...</span>
+			 	</a>
+			 </div>
+            {/volist}
+
+		</div>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript" src="__MOBILE__/js/scrollReveal.js" ></script>
+<script type="text/javascript" src="__MOBILE__/js/projects.js" ></script>
+
+{/block}
+
+
+

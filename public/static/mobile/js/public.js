@@ -1,0 +1,18 @@
+$(function(){
+	//导航切换
+	$('.moreNav').on('click',function(){	
+		if($(this).attr('isOpen')=='false'){
+			$(this).attr('isOpen',true);
+			$('.navBox').stop().slideDown();
+			$(this).addClass('mn45');
+		}else{
+			$(this).attr('isOpen',false);
+			$('.navBox').stop().slideUp();
+			$(this).removeClass('mn45');
+		}
+	});
+	//
+	$('.back').on('click',function(){
+		window.history.go(-1);
+	});
+});

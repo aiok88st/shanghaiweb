@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:58:"F:\wamp\www\shanghaiweb/app/admin\view\category\index.html";i:1516710021;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\head.html";i:1516708701;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\foot.html";i:1512625649;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:58:"F:\wamp\www\shanghaiweb/app/admin\view\category\index.html";i:1516946848;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\head.html";i:1516708701;s:55:"F:\wamp\www\shanghaiweb/app/admin\view\common\foot.html";i:1512625649;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
         <legend><?php echo $title; ?></legend>
     </fieldset>
     <blockquote class="layui-elem-quote">
-        <a href="<?php echo url('add'); ?>" class="layui-btn layui-btn-small"><?php echo lang('add'); ?>分类</a>
+        <a href="<?php echo url('add'); ?>" class="layui-btn layui-btn-small"><?php echo lang('add'); ?>栏目</a>
     </blockquote>
     <table lay-filter="list">
         <thead>

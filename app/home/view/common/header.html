@@ -8,7 +8,15 @@
     <script src="__HOME__/js/lib/vue.min.js"></script>
     <script src="__HOME__/js/lib/swiper.min.js"></script>
     <script src="__HOME__/js/lib/swiper.animate1.0.2.min.js"></script>
+    <script src="__HOME__/js/lib/scrollReveal.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var uaTest = /Android|webOS|Windows Phone|iPhone|ucweb|ucbrowser|iPod|BlackBerry/i.test(navigator.userAgent.toLowerCase());
+        var touchTest = 'ontouchend' in document;
+        if(uaTest && touchTest){
+            window.location.href = "{:url('mobile/index/index')}";
+        }
+    </script>
 
     {block name="headers"}
     {/block}

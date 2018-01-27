@@ -1,0 +1,140 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0!important;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+
+    font-family: Arial;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.content .content-top {
+    width: 100%;
+    height: 50%;
+    padding: 0 60px;
+    overflow: hidden;
+}
+
+.content .content-top .info {
+    height: 100%;
+    width: 30%;
+    float: left;
+    position: relative;
+}
+
+.content .content-top .info .tel {
+
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.content .content-top .info .tel li {
+
+    margin-bottom: 8px;
+}
+
+.content .content-top .info .email {
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.content .content-top .info .address {
+    position: absolute;
+    bottom: 15px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+
+.content .content-top .logo {
+    height: 100%;
+    width: 40%;
+    float: left;
+    padding: 0 60px;
+    text-align: center;
+}
+
+.content .content-top .logo img {
+
+    width: 100%;
+}
+
+
+.content .content-top .info2 {
+    height: 100%;
+    width: 30%;
+    padding-left: 60px;
+    float: left;
+    position: relative;
+}
+
+.content .content-top .info2 .wechat {
+    position: absolute;
+    bottom: 15px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.content .content-bottom {
+    width: 100%;
+    padding: 0 60px;
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.content .content-bottom:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.content .content-bottom .two-dimension-code {
+    width: 30%;
+    padding-left: 60px;
+    float: right;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.content .content-bottom .two-dimension-code .picture li {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.content .content-bottom .two-dimension-code .picture li img {
+    width: 100%;
+}

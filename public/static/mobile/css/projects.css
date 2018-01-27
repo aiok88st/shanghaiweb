@@ -1,0 +1,60 @@
+body {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: white; }
+
+header .navBox {
+  background-color: white;
+  padding-bottom: 0.2rem;
+  box-shadow: 0 2px 4px rgba(231, 231, 231, 0.5); }
+
+#mainImg {
+  width: 100%;
+  overflow-x: hidden; }
+  #mainImg .mainImgBox {
+    width: 100%;
+    margin-bottom: 0.05rem;
+    position: relative; }
+    #mainImg .mainImgBox a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      -webkit-flex-direction: column; }
+      #mainImg .mainImgBox a p {
+        text-align: center;
+        font-size: 0.28rem;
+        color: white;
+        line-height: 0.45rem; }
+      #mainImg .mainImgBox a p:nth-child(1) {
+        font-family: 'ar'; }
+      #mainImg .mainImgBox a p:nth-child(2) {
+        font-size: 0.26rem; }
+      #mainImg .mainImgBox a span {
+        font-size: 0.2rem;
+        color: white !important;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 5%;
+        text-align: center; }
+    #mainImg .mainImgBox img {
+      width: 100%; }
+  #mainImg .mainImgBox:nth-last-child(1) {
+    margin-bottom: 0; }
+
+footer {
+  position: relative; }
+
+/*# sourceMappingURL=projects.css.map */

@@ -1,0 +1,253 @@
+.flex-center-vertically {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.ellipsis-1 {
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-box-orient: vertical!important;
+    -webkit-line-clamp: 1!important;
+}
+
+.hover-item {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+.hover-item:hover {
+    -webkit-transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -3px, 0);
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+
+.myanimate1 {
+    animation: myanimate 5s linear infinite;
+    animation-delay: 2s;
+}
+
+.myanimate2 {
+    animation: myanimate 5s linear infinite;
+    animation-delay: 3s;
+}
+
+.myanimate3 {
+    animation: myanimate 5s linear infinite;
+    animation-delay: 4s;
+}
+
+.myanimate4 {
+    animation: myanimate 5s linear infinite;
+    animation-delay: 5s;
+}
+
+.myanimate1:hover,
+.myanimate2:hover,
+.myanimate3:hover,
+.myanimate4:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes myanimate {
+    0% {
+
+        box-shadow: 0 0 2px skyblue;
+        transform: translate(0, 0);
+    }
+    25% {
+
+        box-shadow: 0 0 18px skyblue;
+        transform: translate(0, 10px);
+    }
+    50% {
+
+        box-shadow: 0 0 18px skyblue;
+        transform: translate(0, 0);
+    }
+    75% {
+
+        box-shadow: 0 0 2px skyblue;
+        transform: translate(0, -10px);
+    }
+    100% {
+
+        box-shadow: 0 0 2px skyblue;
+        transform: translate(0, 0);
+    }
+}
+
+#container .swiper-button-next.swiper-button-disabled,
+#container .swiper-button-prev.swiper-button-disabled {
+    pointer-events: auto;
+}
+
+html,body{
+    min-width: 1000px;
+}
+
+#container {
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 150px;
+    padding-bottom: 110px;
+    width: 100%;
+    
+    position: relative;
+    overflow: hidden;
+    /* -webkit-transition: all 1s; */
+    /* transition: all 1s; */
+}
+
+
+.nav-container {
+    position: fixed;
+    display: block;
+    /* min-width: 992px; */
+    top: 0;
+    left: 0;
+    padding: 0 60px;
+    z-index: 999;
+    width: 100%;
+    min-width: 1000px;
+    overflow: hidden;
+    height: 150px;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 1s;
+}
+
+.nav-container ul {
+    float: right;
+    height: 100%;
+}
+
+.nav-container ul li {
+
+    float: left;
+    height: 100%;
+    margin-left: 100px;
+}
+
+.nav-container ul li a {
+    font-family: Arial;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #666;
+}
+
+@media (max-width: 1200px) {
+    .nav-container ul li {
+
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-container ul li {
+
+        margin-left: 55px;
+    }
+}@media (max-width: 954px) {
+    .nav-container ul li {
+
+        margin-left: 45px;
+    }
+}
+
+
+
+.nav-container ul li a:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #ccc;
+}
+
+.nav-container .logo {
+    float: left;
+    height: 100%;
+}
+
+.nav-container .logo img {
+
+    cursor: pointer;
+}
+
+.nav-container .logo a {
+
+    -webkit-transition: all 0.5s;
+
+    transition: all 0.5s;
+}
+
+.nav-container .logo a:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+
+.footer {
+    position: fixed;
+    padding: 0 60px;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+
+    width: 100%;
+    height: 110px;
+
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.89);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+
+
+@media (max-height: 1000px) {
+    #container {
+        padding-bottom: 45px;
+        padding-top: 80px;
+    }
+    .footer {
+        height: 45px;
+    }
+    .nav-container {
+        height: 80px;
+    }
+}
+
+@media (max-height: 800px) {
+    #container {
+        padding-bottom: 45px;
+        padding-top: 50px;
+    }
+    .footer {
+        height: 45px;
+    }
+    .nav-container {
+        height: 50px;
+    }
+}
+
+
+
+/*页面缩放*/
+

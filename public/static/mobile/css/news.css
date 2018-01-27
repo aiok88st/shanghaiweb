@@ -1,0 +1,51 @@
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white; }
+
+header {
+  position: fixed;
+  z-index: 10; }
+
+#mainContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; }
+  #mainContent .news .newsTitle {
+    font-family: "arial narrow";
+    font-size: 0.28rem;
+    color: black;
+    font-weight: bold;
+    line-height: 1.2rem; }
+  #mainContent .news .newsBox {
+    height: 2.8rem;
+    overflow: hidden; }
+    #mainContent .news .newsBox .newsBoxIn {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll; }
+    #mainContent .news .newsBox .newsBoxIn::-webkit-scrollbar {
+      width: 0.08rem;
+      background-color: #EEEEEE; }
+    #mainContent .news .newsBox .newsBoxIn::-webkit-scrollbar-thumb {
+      border-radius: 0.04rem;
+      background-color: #D6D6D6; }
+    #mainContent .news .newsBox ul li a {
+      font-size: 0.24rem;
+      color: black;
+      line-height: 0.5rem;
+      padding: 0.1rem 0; }
+      #mainContent .news .newsBox ul li a p:nth-child(1) {
+        width: 20%; }
+      #mainContent .news .newsBox ul li a p:nth-child(2) {
+        width: 70%; }
+
+/*# sourceMappingURL=news.css.map */

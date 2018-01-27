@@ -1,0 +1,42 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/news.css" />
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+		<section id="mainContent">
+			<div class="box news">
+				<div class="newsTitle">
+					<p>LASTED NEWS</p>
+				</div>
+				<div class="newsBox">
+					<!--事件小于等于四件时。设置newsBoxIn的overflow:hidden-->
+					<div class="newsBoxIn" {if condition="$count elt 4"}style="overflow:hidden;"{/if} >
+						<ul>
+                            {volist name="team" id="vo" key="k"}
+                                <li>
+                                    <a href="{:url('News/detail')}?id={$vo.id}">
+                                        <p class="floatl">{$vo.createtime|date="Ym",###}&nbsp;&nbsp;</p>
+                                        <p class="floatl">{$vo.title}</p>
+                                        <div class="clearl"></div>
+                                    </a>
+                                </li>
+                            {/volist}
+
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+
+
+{/block}
+
+

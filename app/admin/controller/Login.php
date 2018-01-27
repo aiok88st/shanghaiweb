@@ -14,9 +14,9 @@ class Login extends Controller
         if(request()->isPost()) {
             $admin = new Admin();
             $data = input('post.');
-            if(!$this->check($data['captcha'])){
-                return json(array('code' => 0, 'msg' => '验证码错误'));
-            }
+//            if(!$this->check($data['captcha'])){
+//                return json(array('code' => 0, 'msg' => '验证码错误'));
+//            }
             $num = $admin->login($data);
             if($num == 1){
                 return json(['code' => 1, 'msg' => '登录成功!', 'url' => url('index/index')]);

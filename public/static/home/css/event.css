@@ -1,0 +1,98 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-bottom: 0!important;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer{
+    background-color: rgba(0,0,0,0);
+}
+.content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.content .detail {
+    padding-top: 30px;
+    padding-left: 5%;
+    width: 40%;
+    height: 100%;
+    float: left;
+    font-family: Microsoft YaHei;
+}
+
+.content .detail .back {
+    color: #252525;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.content .detail .title {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+}
+
+.content .detail .time {
+    color: #000;
+    font-size: 12px;
+    font-family: Microsoft YaHei;
+}
+
+.content .detail .content-box {
+    width: 100%;
+    padding-right: 40px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.content .detail .content-box .swiper-slide {
+    height: auto;
+    font-size: 14px;
+    line-height: 3;
+}
+
+.content .detail .content-box .swiper-scrollbar {
+    right: 20px;
+}
+
+.content .photos {
+    padding-top: 30px;
+    padding-right: 80px;
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.content #photos {
+    height: 100%;
+    padding-right: 30px;
+    width: 100;
+    overflow: hidden;
+}
+
+.content #photos .swiper-slide {
+    height: auto;
+}.content #photos .swiper-slide li{
+    margin-bottom: 25px;
+}.content #photos .swiper-slide li:last-child{
+    margin-bottom: 0;
+}
+
+.content #photos .swiper-slide img {
+    width: 100%;
+}

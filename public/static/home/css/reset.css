@@ -1,0 +1,37 @@
+@font-face {
+    font-family: baskerville-old-face-caps-regular;
+    src: url('../fonts/baskerville-old-face-caps-regular.ttf');
+}
+
+@font-face {
+    font-family: Arial;
+    src: url('../fonts/Arial.ttf');
+}
+
+@font-face {
+    font-family: AvianRegular;
+    src: url('../fonts/Avian-Regular.TTF');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+ 
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

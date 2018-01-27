@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:54:"F:\wamp\www\shanghaiweb/app/home\view\index\index.html";i:1516850727;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\header.html";i:1516862832;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\footer.html";i:1516847159;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:54:"F:\wamp\www\shanghaiweb/app/home\view\index\index.html";i:1516850727;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\header.html";i:1516954617;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\footer.html";i:1516847159;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,15 @@
     <script src="__HOME__/js/lib/vue.min.js"></script>
     <script src="__HOME__/js/lib/swiper.min.js"></script>
     <script src="__HOME__/js/lib/swiper.animate1.0.2.min.js"></script>
+    <script src="__HOME__/js/lib/scrollReveal.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var uaTest = /Android|webOS|Windows Phone|iPhone|ucweb|ucbrowser|iPod|BlackBerry/i.test(navigator.userAgent.toLowerCase());
+        var touchTest = 'ontouchend' in document;
+        if(uaTest && touchTest){
+            window.location.href = "<?php echo url('mobile/index/index'); ?>";
+        }
+    </script>
 
     
 <link rel="stylesheet" href="__HOME__/css/home.css">

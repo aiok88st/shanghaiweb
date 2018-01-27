@@ -1,0 +1,117 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.swiper-container{
+    height: 100%;
+    width: 100%;
+}
+.swiper-container .swiper-wrapper {
+    
+    height: 100%;
+    
+
+}.swiper-container .swiper-wrapper .swiper-slide {
+    
+    height: 100%;
+    
+
+}
+.swiper-container .swiper-wrapper .swiper-slide .box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .box .explain {
+    width: 30%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    padding-left: 15px;
+    font-family: 'baskerville-old-face-caps-regular';
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail * {
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail * {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail * {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail * {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .swiper-container .swiper-wrapper .swiper-slide .box .explain .explain-detail * {
+        font-size: 24px;
+    }
+}
+
+
+
+
+.swiper-container .swiper-wrapper .swiper-slide .box .picture {
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-position: center center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+}
+
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet {
+    background: #757575;
+    opacity: 1;
+}
+
+
+.swiper-pagination-bullet-active {
+    background: #E4E4E4;
+    opacity: 1;
+}
+
+
+
+
+
+

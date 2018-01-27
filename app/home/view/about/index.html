@@ -60,10 +60,10 @@
                     {volist name="team" id="vo" key="i"}
                         <li class="member hover-item" style="width: 12.5%">
                             <img src="__PUBLIC__{$vo.thumb}" alt="" data-scroll-reveal="{$i}>animate.length?animate[{$i}%animate.length]:animate[{$i}-1]">
-                            <div class="info flex-center-vertically">
-                                <p class="name">{$vo.title}</p>
-                                <p class="position">{$vo.content}</p>
-                            </div>
+                            <!--<div class="info flex-center-vertically">-->
+                                <!--<p class="name">{$vo.title}</p>-->
+                                <!--<p class="position">{$vo.content}</p>-->
+                            <!--</div>-->
                         </li>
                     {/volist}
                 </ul>
@@ -87,86 +87,48 @@
 {block name="footer"}
 {include file="common/footer" /}
 <script type="text/javascript">
-//    window.onload = function() {
-//        var vm = new Vue({
-//            el: "#container",
-//            data: {
-//                animate: ['enter top',
-//                    'enter right after 0.5s',
-//                    'enter bottom over 1s and move 300px after 0.3s',
-//                    'enter top over 0.5s and move 200px',
-//                    'enter left over 1s and move 100px',
-//                    'enter bottom over 1s and move 300px after 0.3s',
-//                    'enter top over 3s after 0.5s',
-//                    'enter left',
-//                    'enter right over 1s and move 100px',
-//                    'enter top over 0.5s and move 200px',
-//                    'enter left over 3s after 0.5s',
-//                    'enter right after 0.5s',
-//                    'enter top over 3s after 0.5s',
-//                    'enter bottom over 1s and move 100px',
-//                    'enter right over 0.5s and move 200px',
-//                    'enter bottom over 1s and move 300px after 0.3s',
-//                    'enter right after 0.5s',
-//                    'enter top over 3s after 0.5s',
-//                    'enter bottom over 1s and move 100px',
-//                    'enter right over 0.5s and move 200px',
-//                    'enter left',
-//                    'enter top over 3s after 0.5s',
-//                    'enter right over 1s and move 100px'
-//                ],
-//            },
-//            methods: {
-//                checkWidth: function () {
-//                    var parentNode = document.getElementById('team-photos');
-//                    var minWidth = 200;
-//                    if (window.innerWidth <= 1280 && window.innerWidth > 1000) {
-//                        minWidth = 160;
-//                    } else if (window.innerWidth <= 1000) {
-//                        minWidth = 140;
-//                    } else if (window.innerWidth <= 800) {
-//                        minWidth = 90;
-//                    }
-//                    var pranentWidth = parentNode.offsetWidth;
-//                    var num = (pranentWidth / minWidth) | 0;
-//                    var sur = pranentWidth % minWidth;
-//                    var w = sur / num | 0;
-//                    for (var i = 0; i < parentNode.childNodes.length; i++) {
-//                        parentNode.childNodes[i].style.width = minWidth + w + 'px';
-//                        parentNode.childNodes[i].style.height = (minWidth + w) / 232 * 360 + 'px';
-//                    }
-//                }
-//            }
-//
-//        });
+    $(function(){
+        for(var i=0;i<$('#team-photos li').length;i++)
+        {
+            var index = parseInt(i%5);
+            switch(index){
+                case 0:
+                    $('#team-photos li').eq(i).find('img').attr('data-scroll-reveal','enter right and move 20px over 1.2s');
+                    break;
+                case 1:
+                    $('#team-photos li').eq(i).find('img').attr('data-scroll-reveal','enter top and move 10px over 1.5s');
+                    break;
+                case 2:
+                    $('#team-photos li').eq(i).find('img').attr('data-scroll-reveal','enter bottom and move 30px over 1.0s');
+                    break;
+                case 3:
+                    $('#team-photos li').eq(i).find('img').attr('data-scroll-reveal','enter top and move 40px over 1.0s');
+                    break;
+                case 4:
+                    $('#team-photos li').eq(i).find('img').attr('data-scroll-reveal','enter left and move 30px over 1.0s');
+                    break;
+            }
+        }
+        for(var j=0;j<$('.client-list ul li').length;j++)
+        {
+            if(j%2==0)
+            {
+                $('.client-list ul li').eq(j).attr('data-scroll-reveal','enter left and move 50px over 1s');
+            }else{
+                $('.client-list ul li').eq(j).attr('data-scroll-reveal','enter right and move 50px over 1s');
+            }
+        }
 
-//        vm.$nextTick(function () {
-//            window.onresize = function () {
-//                vm.checkWidth();
-//            }
-//            this.checkWidth();
-//            var scroll = new Swiper('#scroll', {
-//                observer: true, //修改swiper自己或子元素时，自动初始化swiper
-//                observeParents: true, //修改swiper的父元素时，自动初始化swiper
-//                direction: 'vertical',
-//                slidesPerView: 'auto',
-//                freeMode: true,
-//                scrollbar: {
-//                    el: '#scroll .swiper-scrollbar',
-//                    draggable: true,
-//                    snapOnRelease: false,
-//                },
-//                mousewheel: true,
-//            });
-//            if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
-//                (function () {
-//                    window.scrollReveal = new scrollReveal({reset: false});
-//                })();
-//            }
-//            ;
-//        })
+        //开启滑动动画
+        if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            (function() {
+                window.scrollReveal = new scrollReveal({
+                    reset: true
+                });
+            })();
+        };
+    })
 
-//    }
 </script>
 
 {/block}

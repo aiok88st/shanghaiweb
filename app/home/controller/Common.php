@@ -6,6 +6,10 @@ class Common extends Controller{
     protected $site_config = null;
     //导航和底部信息
     public function _initialize(){
+        if(isMobile()){
+            header('location:'.url('mobile/index/index'));
+        }
+
         //顶部导航
         $cat = db('category');
         $nav = $cat->where('parentid',0)->field("catname,id,parentid,url")->order('listorder asc')->select();

@@ -5,16 +5,16 @@
     </fieldset>
     <form class="layui-form layui-form-pane">
         <input TYPE="hidden" name="id" value="{$record.id}">
-        <div class="layui-form-item">
-            <label class="layui-form-label">请选择模型</label>
-            <div class="layui-input-3">
-                <select name="moduleid" lay-verify="required" lay-filter="moduleid" id="moduleid">
-                    {volist name="modulelist" id="vo"}
-                    <option value="{$vo.id}" {if condition="$module eq $vo['id']"}selected{/if}>{$vo.title}</option>
-                    {/volist}
-                </select>
-            </div>
-        </div>
+        <!--<div class="layui-form-item">-->
+            <!--<label class="layui-form-label">请选择模型</label>-->
+            <!--<div class="layui-input-3">-->
+                <!--<select name="moduleid" lay-verify="required" lay-filter="moduleid" id="moduleid">-->
+                    <!--{volist name="modulelist" id="vo"}-->
+                    <!--<option value="{$vo.id}" {if condition="$module eq $vo['id']"}selected{/if}>{$vo.title}</option>-->
+                    <!--{/volist}-->
+                <!--</select>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="layui-form-item">
             <label class="layui-form-label">上级栏目</label>
             <div class="layui-input-3">
@@ -69,7 +69,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">栏目链接</label>
             <div class="layui-input-block">
-                <input type="text" name="url" value="{$record.url}" placeholder="请输入栏目链接地址" class="layui-input">
+                <input type="text" name="url" value="{$record.url}" placeholder="请输入栏目链接地址，如：index/index" class="layui-input">
             </div>
         </div>
 
@@ -134,6 +134,7 @@
         form.on('submit(submit)', function (data) {
             // 提交到方法 默认为本身
             var loading = layer.load(1, {shade: [0.1, '#fff']});
+            data.field.moduleid = 3;
             $.post("{:url('catUpdate')}", data.field, function (res) {
                 layer.close(loading);
                 if (res.code > 0) {
@@ -145,9 +146,9 @@
                 }
             });
         });
-        form.on('select(moduleid)', function(data){
-            showtemplist(data.value,0,form);
-        });
+//        form.on('select(moduleid)', function(data){
+//            showtemplist(data.value,0,form);
+//        });
     });
     function showtemplist(m,t,form){
 

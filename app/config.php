@@ -148,6 +148,8 @@ return [
         '__STATIC__' =>__PUBLIC__.'/static',
         '__ADMIN__'    => __PUBLIC__.'/static/admin',
         '__HOME__'     => __PUBLIC__.'/static/home',
+        '__MOBILE__'     => __PUBLIC__.'/static/mobile',
+        '__USER__'     => __PUBLIC__.'/static/user',
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
@@ -217,6 +219,8 @@ return [
         'type'           => '',
         // 是否自动开启 SESSION
         'auto_start'     => true,
+        'expire'=>86400,
+        'path'=>'./session'
     ],
 
     // +----------------------------------------------------------------------

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="{$info.key}">
+    <meta name="description" content="{$info.des}">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="__MOBILE__/css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" href="__MOBILE__/css/animate.min.css" />
+    <link rel="stylesheet" href="__MOBILE__/css/reset.min.css" />
+    <link rel="stylesheet" href="__MOBILE__/css/public.css?v=1" />
+    <script type="text/javascript" src="__MOBILE__/js/swiper.animate1.0.2.min.js" ></script>
+    <script type="text/javascript" src="__MOBILE__/js/rem.js" ></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="__MOBILE__/js/public.js" ></script>
+    <script type="text/javascript">
+        var uaTest = /Android|webOS|Windows Phone|iPhone|ucweb|ucbrowser|iPod|BlackBerry/i.test(navigator.userAgent.toLowerCase());
+        var touchTest = 'ontouchend' in document;
+        if(!uaTest && !touchTest){
+            window.location.href = "{:url('index/index/index')}";
+        }
+    </script>
+
+    {block name="headers"}
+    {/block}
+
+</head>
+<body>
+<header>
+    <nav class="box">
+        <img class="logoImg" src="__PUBLIC__{$sArr.logo}" />
+        <a href="javascript:;" class="moreNav" isOpen='false'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </nav>
+    <div class="navBox">
+        <ul>
+            {volist name="nav" id="vo"}
+            <li>
+                <a href="{$vo.url}">{$vo.catname}</a>
+            </li>
+            {/volist}
+
+        </ul>
+    </div>
+</header>
+
+    {block name="main"}
+
+    {/block}
+    {block name="footer"}
+
+    {/block}

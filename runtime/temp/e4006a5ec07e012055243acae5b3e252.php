@@ -1,82 +1,91 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"F:\wamp\www\shanghaiweb/app/admin\view\login\index.html";i:1516845003;}*/ ?>
-<!DOCTYPE html>
-<html lang="zh_cn">
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"F:\wamp\www\shanghaiweb/app/admin\view\login\index.html";i:1516957484;}*/ ?>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>后台登录</title>
-    <link rel="stylesheet" href="__STATIC__/plugins/layui/css/layui.css" media="all" />
-    <link rel="stylesheet" href="__ADMIN__/css/login.css" />
-    <link rel="stylesheet" href="__STATIC__/common/css/font.css" />
+    <meta charset="UTF-8">
+    <title>上海李俊设计资讯有限公司</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="__USER__/css/font.css">
+    <link rel="stylesheet" href="__USER__/css/xadmin.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="__USER__/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__USER__/js/xadmin.js"></script>
+    <style type="text/css">
+        .login{
+            position: absolute;
+            top: 50%;
+            right: 200px;
+            width: 360px;
+            margin-top: -240px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+
 </head>
-<body class="beg-login-bg">
-<div class="container login">
-    <div class="content">
-        <div id="large-header" class="large-header">
-            <canvas id="demo-canvas"></canvas>
-            <div class="main-title">
-                <div class="beg-login-box">
-                    <header>
-                        <h1>后台管理登录</h1>
-                    </header>
-                    <div class="beg-login-main">
-                        <form class="layui-form layui-form-pane" method="post">
-                            <div class="layui-form-item">
-                                <label class="beg-login-icon fs1">
-                                    <span class="icon icon-user"></span>
-                                </label>
-                                <input type="text" name="username" lay-verify="required" placeholder="这里输入登录名" value="" class="layui-input">
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="beg-login-icon fs1">
-                                    <i class="icon icon-key"></i>
-                                </label>
-                                <input type="password"  name="password" lay-verify="required" placeholder="这里输入密码" value="" class="layui-input">
-                            </div>
-                            <div class="layui-form-item">
-                                <input type="text" name="captcha" id="captcha" lay-verify="required" placeholder="验证码" autocomplete="off" class="layui-input">
-                                <div class="captcha">
-                                    <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="this.src=this.src+'?'+'id='+Math.random()"/>
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <button type="submit" class="layui-btn btn-submit btn-blog" lay-submit lay-filter="login">登录</button>
-                            </div>
-                        </form>
-                    </div>
-                    <footer>
-                        <p>上海李俊设计资讯有限公司</p>
-                    </footer>
-                </div>
-            </div>
-        </div>
+<body>
+
+<div style="height: 70px;margin: 10px 0px 10px 50px;">
+    <img src="__ADMIN__/images/logoB.png" alt="" style="height: 40px;padding-top: 15px;" />
+</div>
+
+<div class="backBox" style="position: relative;width: 100%;background:url('__ADMIN__/images/bg.png') no-repeat; background-size: 100% 100%;">
+    <!--<img src="__ADMIN__/images/bgimg.jpg" alt="" style="height: 100%;margin: 0 auto;display: block;" />-->
+    <div class="login">
+        <div class="message">后台管理登录</div>
+        <div id="darkbannerwrap"></div>
+        <form method="post" class="layui-form" >
+            <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
+            <hr class="hr15">
+            <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
+            <hr class="hr15">
+            <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+            <hr class="hr20" >
+        </form>
     </div>
 </div>
-<script src="__ADMIN__/js/rAF.js"></script>
-<script src="__ADMIN__/js/login.js"></script>
-<script type="text/javascript" src="__STATIC__/plugins/layui/layui.js"></script>
+
+<div style="height: 70px;text-align: center;line-height: 70px;">
+    <p>2017 &copy;上海李俊设计资讯有限公司</p>
+</div>
+
+
 <script>
     layui.use('form',function(){
         var form = layui.form,$ = layui.jquery;
         //监听提交
         form.on('submit(login)', function(data){
             loading =layer.load(1, {shade: [0.1,'#fff'] });//0.1透明度的白色背景
-            $.post('<?php echo url("login/index"); ?>',data.field,function(res){
+            $.post('<?php echo url("admin/login/index"); ?>',data.field,function(res){
                 layer.close(loading);
                 if(res.code == 1){
                     layer.msg(res.msg, {icon: 1, time: 1000}, function(){
                         location.href = res.url;
                     });
                 }else{
-                    $('#captcha').val('');
+
                     layer.msg(res.msg, {icon: 2, anim: 6, time: 1000});
-                    $('.captcha img').attr('src','<?php echo captcha_src(); ?>?id='+Math.random());
+
                 }
             });
             return false;
         });
     });
+    $(function(){
+        $('.backBox').height($(window).height()-160);
+    });
+
 </script>
+
 </body>
 </html>

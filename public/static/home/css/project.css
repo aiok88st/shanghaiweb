@@ -1,0 +1,204 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    padding: 0 15%;
+}
+
+@media (max-width: 1280px) {
+    .content {
+
+        padding: 0 6%;
+    }
+}
+
+.content .back {
+    text-align: right;
+    color: #000;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.content .back a {
+    font-size: 16px;
+    color: #000;
+}
+
+.content .banner {
+    width: 100%;
+    position: relative;
+    padding: 0 80px;
+}
+
+.content .banner .swiper-button-next {
+    background-image: none;
+    width: 50px;
+    height: 50px;
+}
+
+.content .banner .swiper-button-next:before {
+    content: "";
+    position: absolute;
+
+    right: 20px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-right: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.content .banner .swiper-button-prev {
+    background-image: none;
+    width: 50px;
+    height: 50px;
+}
+
+.content .banner .swiper-button-prev:before {
+    content: "";
+    position: absolute;
+
+    left: 20px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-left: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+.content #banner {
+    width: 100%;
+}
+
+.content #banner .swiper-slide .box {
+    width: 100%;
+    height: 100%;
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.content .introduce {
+    padding: 0 80px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+
+.content .introduce table {
+    width: 100%;
+}
+
+.content .introduce td {
+    white-space: nowrap;  
+    width: auto;
+    padding: 0 15px;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.content .introduce tr>td:nth-child(2n-1) {
+    text-align: right;
+}
+
+.content .introduce tr>td:nth-child(2n-1):before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 90%;
+    border-right: 1px solid #000;
+}
+
+.content .introduce tr:last-child>td {
+    border-bottom: none;
+}
+
+
+
+.content .explain {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 45px;
+    padding: 0 80px;
+}
+
+.content .explain .essay {
+    width: 70%;
+    float: left;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .explain .essay #essay {
+
+    height: 100%;
+
+    padding: 10px 45px 10px 10px;
+    background-color: #E4E4E4;
+}
+
+.content .explain .essay #essay .swiper-scrollbar {
+
+    background-color: #E3E3E3;
+}
+
+.content .explain .essay #essay .swiper-scrollbar-drag {
+
+    background-color: #434343;
+}
+
+
+
+
+.content .explain .essay #essay:before {
+
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+}
+
+.content .explain .essay .swiper-slide {
+    height: auto;
+    color: #424242;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.content .explain .essay-title {
+    width: 30%;
+    padding-left: 25px;
+    float: left;
+    font-size: 18px;
+    color: #252525;
+}

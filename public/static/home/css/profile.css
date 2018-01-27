@@ -1,0 +1,226 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    height: auto;
+}
+
+.content .introduce {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    float: left;
+    margin-bottom: 220px;
+    background: url('../images/img0.jpg');
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    font-family: AvianRegular;
+}
+
+.content .introduce .box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.content .introduce .about-us {
+    width: 65%;
+    height: 500px;
+    margin-top: 100px;
+    background-color: #000;
+    color: #fff;
+    float: right;
+    font-family: AvianRegular;
+    padding: 100px 60px 10px;
+}
+
+.content .introduce .about-us .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.content .introduce .about-us .about-us-content {
+    font-size: 12px;
+    line-height: 3;
+    width: 100%;
+    max-height: 360px;
+    padding-right: 10px;
+}
+
+.content .introduce .about-us .about-us-content .swiper-scrollbar {
+    background: rgb(204, 188, 175);
+    right: 0;
+}
+
+.content .introduce .work-process {
+
+    float: right;
+    width: 100%;
+    height: 310px;
+    background-color: #000;
+    color: #fff;
+}
+
+.content .introduce .work-process .work-process-content {
+
+    height: 200px;
+    padding: 0 60px;
+}
+
+.content .introduce .work-process .work-process-content .title {
+    letter-spacing: 0.15em;
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+.content .introduce .work-process .work-process-content .work-process-list {
+
+    width: 75%;
+    height: 200px;
+    padding-top: 42px;
+    float: left;
+}
+
+.content .introduce .work-process .work-process-content .work-process-list .circle {
+    overflow: hidden;
+    word-break: break-all;
+    line-height: 1.6;
+    float: left;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 30px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content .introduce .work-process .work-process-content .work-process-list .circle:last-child {
+
+    margin-right: 0;
+}
+
+.content .introduce .work-process .description {
+    width: 100%;
+    padding: 0 60px;
+    font-size: 11px;
+    color: #fff;
+    line-height: 2;
+}
+
+
+.content .leadership {
+    width: 100%;
+    text-align: center;
+}
+
+.content .leadership img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .content .leadership img {
+        width: 100%;
+    }
+}
+
+.content .team {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.content .team .title {
+    text-align: center;
+    font-size: 45px;
+}
+
+.content .team .small-title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.content .team .team-photos {
+    width: 100%;
+
+    margin: 35px auto 120px;
+    float: left;
+}
+
+.content .team .team-photos .member {
+
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.content .team .team-photos .member img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .team .team-photos .member .info {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    -webkit-transition: all .6s linear;
+    transition: all .6s linear
+}
+
+.content .team .team-photos .member:hover .info {
+    height: 100%;
+}
+
+.content .team .team-photos .member .info .name {
+    line-height: 2;
+}
+
+.content .client {
+    width: 100%;
+    clear: both;
+
+    overflow: hidden;
+}
+
+.content .client .client-title {
+    width: 35%;
+    float: left;
+}
+
+.content .client .client-title .title {
+    text-align: center;
+    font-size: 45px;
+}
+
+.content .client .client-title .small-title {
+    text-align: center;
+    font-size: 11px;
+    color: #606060;
+}
+
+.content .client .client-list {
+    padding-top: 10px;
+    width: 65%;
+    float: left;
+}
+
+.content .client .client-list ul li {
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    height: 35px;
+}

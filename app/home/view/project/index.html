@@ -4,12 +4,20 @@
 <title>{$info.title}</title>
 {/block}
 {block name="main"}
-
         <div class="content">
             <div class="swiper-container" id="projects">
                 <div class="swiper-wrapper">
+                    {php}
+                        $num=1;
+                        $count=count($art);
+                    {/php}
+
                     {volist name="art" id="vo"}
+
+                    {if condition="$num eq 1"}
                     <div class="swiper-slide">
+                    {/if}
+
                         <a href="{:url('Project/detail')}?id={$vo.id}" class="box" style="background: url('__PUBLIC__/{$vo.thumb}');">
                             <div class="introduce flex-center-vertically">
                                 <p class="title">{$vo.en_title}</p>
@@ -17,7 +25,17 @@
                                 <p class="more">READ MORE...</p>
                             </div>
                         </a>
+                    {if condition="$num eq $count"}
                     </div>
+                    {/if}
+
+                    {if condition="$num%2 eq 0"}
+                    </div>
+                    <div class="swiper-slide">
+                    {/if}
+
+                    {php}$num++;{/php}
+
                     {/volist}
                 </div>
                 <!-- Add Arrows -->
@@ -25,6 +43,7 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+
 
 {/block}
 
@@ -43,9 +62,14 @@
                         observer: true, //修改swiper自己或子元素时，自动初始化swiper
                         observeParents: true, //修改swiper的父元素时，自动初始化swiper
                         speed: 1000,
+                        loop: 'auto',
+
+                        // slidesPerView: 'auto',
+                        // slidesPerGroup : 3,
+                        // loopedSlides: 3,
                         slidesPerView: 3,
-                        slidesPerColumn: 2,
-                        slidesPerColumnFill: 'row',
+                        // slidesPerColumn: 2,
+                        // slidesPerColumnFill: 'column',
                         navigation: {
                             nextEl: domId + ' .swiper-button-next',
                             prevEl: domId + ' .swiper-button-prev',

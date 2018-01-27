@@ -1,0 +1,72 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/contact.css" />
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+
+		<div id="main">
+			<div class="mainTop">
+				<div class="box">
+					<div class="boxTop">
+						<ul>
+							<li>
+								<a href="tel:02156206144">+{$sArr.tel}「T」</a>
+							</li>
+							<li>
+								<a href="tel:02156206144">+{$sArr.phone}「F」</a>
+							</li>
+							<li>
+								<p class="email">{$sArr.email}</p>
+							</li>
+						</ul>
+					</div>
+					<div class="boxMiddle">
+						<img src="__PUBLIC__{$art['k0']['thumb']}" />
+					</div>
+					<div class="boxBottom">
+						<ul>
+							<li>
+						
+							</li>
+							<li>
+								<p class="address">{$sArr.ads}</p>
+							</li>
+							<li>
+								<p>Zip Code：{$sArr.youbian}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mainBottom">
+				<img src="__PUBLIC__{$img[0]}" />
+				<div class="messageOut">
+					<div class="messageIn">
+						<ul>
+							<li>
+								<p>Sina Weibo: </p>
+							</li>
+							<li>
+								<p>{$sArr.fax}</p>
+							</li>
+							<li>
+								<p>Wechat: {$sArr.wchat}</p>
+							</li>
+							<li>
+								<img src="__PUBLIC__{$sArr.wxpic}" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+
+<script type="text/javascript" src="__MOBILE__/js/contact.js" ></script>
+
+{/block}

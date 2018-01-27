@@ -1,0 +1,109 @@
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden; }
+
+header .navBox {
+  background-color: white;
+  z-index: 5;
+  padding-bottom: 0.2rem; }
+
+#about {
+  background: url(../img/profile.jpg) no-repeat top center;
+  background-size: 100% auto;
+  padding-top: 0.5rem; }
+  #about .about {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.4rem 0; }
+    #about .about .aboutTitle {
+      width: 92%;
+      margin: 0 auto;
+      font-size: 0.28rem;
+      font-family: 'ar';
+      line-height: 0.5rem; }
+    #about .about .aboutContent {
+      width: 92%;
+      margin: 0 auto; }
+      #about .about .aboutContent p {
+        line-height: 0.5rem;
+        font-size: 0.2rem;
+        text-indent: 0.48rem;
+        padding: 0.05rem 0; }
+    #about .about .work {
+      margin: 0.6rem auto 0rem; }
+    #about .about .process > img {
+      width: 100%; }
+    #about .about .process ul li {
+      float: left;
+      width: 23%;
+      transform: scale(0.6, 0.6); }
+      #about .about .process ul li a {
+        width: 2.0rem;
+        height: 2.0rem;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin: 0rem auto 0.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column; }
+        #about .about .process ul li a p {
+          font-size: 0.24rem;
+          color: white;
+          text-align: center; }
+
+#introduce {
+  margin: 0.6rem auto; }
+  #introduce img {
+    width: 100%; }
+
+footer {
+  position: relative; }
+
+#team .tTitle {
+  text-align: center;
+  font-family: "arial narrow";
+  line-height: 0.45rem; }
+  #team .tTitle p:nth-child(1) {
+    font-size: 0.3rem; }
+  #team .tTitle p:nth-child(2) {
+    font-size: 0.26rem; }
+#team .teamBox {
+  width: 100%;
+  padding: 0.2rem 0; }
+  #team .teamBox > img {
+    width: 12.5%;
+    float: left; }
+
+#company {
+  padding: 0.6rem 0 0.4rem; }
+  #company .cpLeft {
+    width: 25%;
+    text-align: center;
+    line-height: 0.45rem; }
+    #company .cpLeft p {
+      font-size: 0.24rem;
+      font-family: "arial narrow";
+      font-weight: bold; }
+    #company .cpLeft nobr {
+      font-size: 0.24rem;
+      color: #606060; }
+      #company .cpLeft nobr p {
+        transform: scale(0.66, 0.66);
+        margin-left: -15%;
+        line-height: 0.2rem; }
+  #company .cpRight {
+    width: 75%;
+    font-size: 0.2rem; }
+    #company .cpRight p {
+      line-height: 0.45rem;
+      color: black; }
+
+/*# sourceMappingURL=profile.css.map */

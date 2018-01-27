@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-01-25 18:50:44
+Date: 2018-01-26 14:27:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -216,24 +216,21 @@ CREATE TABLE `clt_auth_rule` (
 -- Records of clt_auth_rule
 -- ----------------------------
 INSERT INTO `clt_auth_rule` VALUES ('1', 'System', '系统设置', '1', '1', '0', 'icon-cogs', '', '0', '3', '1446535750', '1', '1');
-INSERT INTO `clt_auth_rule` VALUES ('2', 'System/system', '中文版设置', '1', '1', '0', '', '', '1', '1', '1446535789', '1', '1');
-INSERT INTO `clt_auth_rule` VALUES ('3', 'Database/database', '数据库管理', '1', '1', '0', 'icon-database', '', '0', '4', '1446535805', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('4', 'Database/restore', '还原数据库', '1', '1', '0', '', '', '3', '10', '1446535750', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('5', 'Database/database', '数据库备份', '1', '1', '0', '', '', '3', '1', '1446535834', '1', '0');
+INSERT INTO `clt_auth_rule` VALUES ('2', 'System/system', '网站信息设置', '1', '1', '0', '', '', '1', '1', '1446535789', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('7', 'Category', '栏目管理', '1', '1', '0', 'icon-list', '', '0', '2', '1446535875', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('9', 'Category/index', '栏目列表', '1', '1', '0', '', '', '7', '0', '1446535750', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('13', 'Category/edit', '操作-修改', '1', '1', '0', '', '', '9', '3', '1446535750', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('14', 'Category/add', '操作-添加', '1', '1', '0', '', '', '9', '0', '1446535750', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('15', 'Auth/adminList', '权限管理', '1', '1', '0', 'icon-lifebuoy', '', '0', '3', '1446535750', '1', '1');
+INSERT INTO `clt_auth_rule` VALUES ('15', 'Auth/adminList', '管理员管理', '1', '1', '0', 'icon-lifebuoy', '', '0', '3', '1446535750', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('16', 'Auth/adminList', '管理员列表', '1', '1', '0', '', '', '15', '0', '1446535750', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('17', 'Auth/adminGroup', '用户组列表', '1', '1', '0', '', '', '15', '1', '1446535750', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('18', 'Auth/adminRule', '权限管理', '1', '1', '0', '', '', '15', '2', '1446535750', '1', '1');
 INSERT INTO `clt_auth_rule` VALUES ('23', 'Help/soft', '软件下载', '1', '1', '0', '', '', '22', '50', '1446711421', '0', '1');
-INSERT INTO `clt_auth_rule` VALUES ('28', 'Function', '图片管理', '1', '1', '0', 'icon-file-picture', '', '0', '1', '1447231590', '1', '1');
+INSERT INTO `clt_auth_rule` VALUES ('28', 'Function', '图片管理', '1', '1', '0', 'icon-file-picture', '', '0', '1', '1447231590', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('36', 'We/we_menu', '自定义菜单', '1', '1', '0', '', '', '35', '50', '1447842477', '0', '1');
 INSERT INTO `clt_auth_rule` VALUES ('39', 'We/we_menu', '自定义菜单', '1', '1', '0', '', '', '36', '50', '1448501584', '0', '1');
-INSERT INTO `clt_auth_rule` VALUES ('45', 'Ad/index', 'banner图管理', '1', '1', '0', '', '', '28', '3', '1450314297', '1', '1');
-INSERT INTO `clt_auth_rule` VALUES ('46', 'Ad/type', 'banner图位置管理', '1', '1', '0', '', '', '28', '4', '1450314324', '1', '1');
+INSERT INTO `clt_auth_rule` VALUES ('45', 'Ad/index', 'banner图管理', '1', '1', '0', '', '', '28', '3', '1450314297', '1', '0');
+INSERT INTO `clt_auth_rule` VALUES ('46', 'Ad/type', 'banner图位置管理', '1', '1', '0', '', '', '28', '4', '1450314324', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('105', 'System/runsys', '操作-保存', '1', '1', '0', '', '', '6', '50', '1461036331', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('106', 'System/runwesys', '操作-保存', '1', '1', '0', '', '', '10', '50', '1461037680', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('107', 'System/runemail', '操作-保存', '1', '1', '0', '', '', '19', '50', '1461039346', '1', '0');
@@ -253,16 +250,11 @@ INSERT INTO `clt_auth_rule` VALUES ('122', 'System/source_runadd', '操作-添�
 INSERT INTO `clt_auth_rule` VALUES ('123', 'System/source_order', '操作-排序', '1', '1', '0', '', '', '43', '50', '1461037680', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('124', 'System/source_runedit', '操作-改存', '1', '1', '0', '', '', '43', '30', '1461039346', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('125', 'System/source_del', '操作-删除', '1', '1', '0', '', '', '43', '40', '146103934', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('126', 'Database/export', '操作-备份', '1', '1', '0', '', '', '5', '1', '1461550835', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('127', 'Database/optimize', '操作-优化', '1', '1', '0', '', '', '5', '1', '1461550835', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('128', 'Database/repair', '操作-修复', '1', '1', '0', '', '', '5', '1', '1461550835', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('129', 'Database/delSqlFiles', '操作-删除', '1', '1', '0', '', '', '4', '3', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('130', 'System/bxgs_state', '操作-状态', '1', '1', '0', '', '', '67', '5', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('131', 'System/bxgs_edit', '操作-修改', '1', '1', '0', '', '', '67', '1', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('132', 'System/bxgs_runedit', '操作-改存', '1', '1', '0', '', '', '67', '2', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('134', 'System/myinfo_runedit', '个人资料修改', '1', '1', '0', '', '', '68', '1', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('236', 'Category/del', '操作-删除', '1', '1', '0', '', '', '9', '5', '1497424900', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('230', 'Database/restoreData', '操作-还原', '1', '1', '0', '', '', '4', '1', '1497423595', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('145', 'Auth/adminState', '操作-状态', '1', '1', '0', '', '', '16', '5', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('149', 'Auth/groupAdd', '操作-添加', '1', '1', '0', '', '', '17', '1', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('151', 'Auth/groupRunaccess', '操作-权存', '1', '1', '0', '', '', '17', '50', '1461550835', '1', '0');
@@ -278,23 +270,17 @@ INSERT INTO `clt_auth_rule` VALUES ('173', 'Ad/del', '操作-删除', '1', '1', 
 INSERT INTO `clt_auth_rule` VALUES ('174', 'Ad/adOrder', '操作-排序', '1', '1', '0', '', '', '45', '4', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('175', 'Ad/editState', '操作-状态', '1', '1', '0', '', '', '45', '3', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('176', 'Ad/addType', '操作-添加', '1', '1', '0', '', '', '46', '1', '1461550835', '1', '0');
-INSERT INTO `clt_auth_rule` VALUES ('252', 'Template/edit', '操作-编辑', '1', '1', '0', '', '', '197', '3', '1497428906', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('178', 'Ad/delType', '操作-删除', '1', '1', '0', '', '', '46', '4', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('179', 'Ad/typeOrder', '操作-排序', '1', '1', '0', '', '', '46', '3', '1461550835', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('180', 'System/source_edit', '操作-修改', '1', '1', '0', '', '', '43', '20', '1461832933', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('181', 'Auth/groupState', '操作-状态', '1', '1', '0', '', '', '17', '50', '1461834340', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('183', 'Ad/editType', '操作-修改', '1', '1', '0', '', '', '46', '2', '1461834988', '1', '0');
 INSERT INTO `clt_auth_rule` VALUES ('188', 'Plug/donation', '捐赠列表', '1', '1', '0', '', '', '187', '50', '1466563673', '0', '1');
-INSERT INTO `clt_auth_rule` VALUES ('189', 'Module', '模型管理', '1', '1', '0', 'icon-ungroup', '', '0', '3', '1466825363', '0', '1');
-INSERT INTO `clt_auth_rule` VALUES ('190', 'Module/index', '模型列表', '1', '1', '0', '', '', '189', '1', '1466826681', '0', '1');
+INSERT INTO `clt_auth_rule` VALUES ('189', 'Module', '模型管理', '1', '1', '0', 'icon-ungroup', '', '0', '3', '1466825363', '0', '0');
+INSERT INTO `clt_auth_rule` VALUES ('190', 'Module/index', '模型列表', '1', '1', '0', '', '', '189', '1', '1466826681', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('192', 'Module/edit', '操作-修改', '1', '1', '0', '', '', '190', '2', '1467007920', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('193', 'Module/add', '操作-添加', '1', '1', '0', '', '', '190', '1', '1467007955', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('196', 'Template', '模版管理', '1', '1', '0', 'icon-embed2', '', '0', '7', '1481857304', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('197', 'Template/index', '模版管理', '1', '1', '0', '', '', '196', '1', '1481857540', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('198', 'Template/insert', '操作-添存', '1', '1', '0', '', '', '197', '2', '1481857587', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('202', 'Template/add', '操作-添加', '1', '1', '0', '', '', '197', '1', '1481859447', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('212', 'Wechat/weixin', '操作-设置', '1', '1', '0', '', '', '207', '1', '1487064541', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('232', 'Database/downFile', '操作-下载', '1', '1', '0', '', '', '4', '2', '1497423744', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('235', 'Category/catUpdate', '操作-该存', '1', '1', '0', '', '', '9', '4', '1497424301', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('241', 'Module/field', '模型字段', '1', '1', '0', '', '', '190', '6', '1497425972', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('242', 'Module/fieldStatus', '操作-状态', '1', '1', '0', '', '', '241', '4', '1497426044', '0', '0');
@@ -302,16 +288,10 @@ INSERT INTO `clt_auth_rule` VALUES ('243', 'Module/fieldAdd', '操作-添加', '
 INSERT INTO `clt_auth_rule` VALUES ('244', 'Module/fieldEdit', '操作-修改', '1', '1', '0', '', '', '241', '2', '1497426134', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('245', 'Module/listOrder', '操作-排序', '1', '1', '0', '', '', '241', '3', '1497426179', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('246', 'Module/fieldDel', '操作-删除', '1', '1', '0', '', '', '241', '5', '1497426241', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('253', 'Template/update', '操作-改存', '1', '1', '0', '', '', '197', '4', '1497428951', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('254', 'Template/delete', '操作-删除', '1', '1', '0', '', '', '197', '5', '1497429018', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('255', 'Template/images', '媒体文件管理', '1', '1', '0', '', '', '197', '6', '1497429157', '0', '0');
-INSERT INTO `clt_auth_rule` VALUES ('256', 'Template/imgDel', '操作-文件删除', '1', '1', '0', '', '', '255', '1', '1497429217', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('258', 'Wechat/editMenu', '操作-编辑', '1', '1', '0', '', '', '208', '2', '1497429671', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('261', 'Wechat/delMenu', '操作-删除', '1', '1', '0', '', '', '208', '5', '1497429822', '0', '0');
 INSERT INTO `clt_auth_rule` VALUES ('273', 'Articles', '内容管理', '1', '1', '0', 'icon-list2', '', '0', '0', '1506311581', null, '1');
-INSERT INTO `clt_auth_rule` VALUES ('274', 'Articles/index', '中文版', '1', '1', '0', '', '', '273', '50', '1506321549', null, '1');
-INSERT INTO `clt_auth_rule` VALUES ('275', 'Articles/index2', '英文版', '1', '1', '0', '', '', '273', '50', '1506409439', null, '1');
-INSERT INTO `clt_auth_rule` VALUES ('278', 'System/systemEn', '英文版设置', '1', '1', '1', '', '', '1', '50', '1507015056', null, '1');
+INSERT INTO `clt_auth_rule` VALUES ('274', 'Articles/index', '内容列表', '1', '1', '0', '', '', '273', '50', '1506321549', null, '1');
 
 -- ----------------------------
 -- Table structure for clt_category
@@ -347,19 +327,20 @@ CREATE TABLE `clt_category` (
   PRIMARY KEY (`id`),
   KEY `parentid` (`parentid`),
   KEY `listorder` (`listorder`)
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of clt_category
 -- ----------------------------
 INSERT INTO `clt_category` VALUES ('59', 'EVENT & NEWS', '', '', '0', '3', 'picture', '0', '59', '0', 'EVENT & NEWS', 'EVENT & NEWS', 'EVENT & NEWS', '3', '0', '1', '0', '', '0', 'News/index', '', '', '0', '', '0', '1');
-INSERT INTO `clt_category` VALUES ('58', 'PROFILE', '', '', '0', '3', 'picture', '0', '58,62,63', '0', 'PROFILE', 'PROFILE', 'PROFILE', '2', '0', '1', '0', '', '0', 'About/index', '', '', '0', '', '0', '1');
+INSERT INTO `clt_category` VALUES ('58', 'PROFILE', '', '', '0', '3', 'picture', '0', '58,62,63,64,65', '0', 'PROFILE', 'PROFILE', 'PROFILE', '2', '0', '1', '0', '', '0', 'About/index', '', '', '0', '', '0', '1');
 INSERT INTO `clt_category` VALUES ('57', 'HOME', '', '', '0', '3', 'picture', '0', '57', '0', '上海李俊设计资讯有限公司', '上海李俊设计资讯有限公司', '上海李俊设计资讯有限公司', '1', '0', '1', '0', '', '0', 'Index/index', '', '', '0', '', '0', '1');
 INSERT INTO `clt_category` VALUES ('60', 'PROJECTS', '', '', '0', '3', 'picture', '0', '60', '0', 'PROJECTS', 'PROJECTS', 'PROJECTS', '4', '0', '1', '0', '', '0', 'Project/index', '', '', '0', '', '0', '1');
 INSERT INTO `clt_category` VALUES ('61', 'CONTACT', '', '', '0', '3', 'picture', '0', '61', '0', 'CONTACT', 'CONTACT', 'CONTACT', '5', '0', '1', '0', '', '0', 'Contact/index', '', '', '0', '', '0', '1');
-INSERT INTO `clt_category` VALUES ('62', 'ABOUT AS', '', '/', '58', '3', 'picture', '0,58', '62', '0', 'ABOUT AS', 'ABOUT AS', 'ABOUT AS', '0', '0', '2', '0', '', '0', '', '', '', '0', '', '0', '1');
+INSERT INTO `clt_category` VALUES ('62', 'ABOUT AS（PC端）', '', '/', '58', '3', 'picture', '0,58', '62', '0', 'ABOUT AS', 'ABOUT AS', 'ABOUT AS', '0', '0', '2', '0', '', '0', '', '', '', '0', '', '0', '1');
 INSERT INTO `clt_category` VALUES ('63', 'MEET OUR FEARLESS TEAM', '', '/', '58', '3', 'picture', '0,58', '63', '0', 'MEET OUR FEARLESS TEAM', 'MEET OUR FEARLESS TEAM', 'MEET OUR FEARLESS TEAM', '0', '0', '2', '0', '', '0', '', '', '', '0', '', '0', '1');
 INSERT INTO `clt_category` VALUES ('64', 'CLIENT', '', '/', '58', '3', 'picture', '0,58', '64', '0', 'CLIENT', 'CLIENT', 'CLIENT', '0', '0', '2', '0', '', '0', '', '', '', '0', '', '0', '1');
+INSERT INTO `clt_category` VALUES ('65', 'ABOUT AS（手机端）', '', '/', '58', '3', 'picture', '0,58', '65', '0', 'ABOUT AS', 'ABOUT AS', 'ABOUT AS', '0', '0', '2', '0', '', '0', '', '', '', '0', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for clt_config
@@ -820,7 +801,7 @@ CREATE TABLE `clt_picture` (
   KEY `status` (`id`,`status`,`listorder`),
   KEY `catid` (`id`,`catid`,`status`),
   KEY `listorder` (`id`,`catid`,`status`,`listorder`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of clt_picture
@@ -842,13 +823,16 @@ INSERT INTO `clt_picture` VALUES ('23', '64', '1', 'admin', '華潤集團', '', 
 INSERT INTO `clt_picture` VALUES ('24', '63', '1', 'admin', '吉姆', '', '', '<p>设计师</p>', '', '0', '1', '0', '1516864181', '1516874598', '', '', '', '', '', '', '', '', '/uploads/20180125/7b439241977829cc8b346b8155a0f44e.jpg');
 INSERT INTO `clt_picture` VALUES ('25', '63', '1', 'admin', '吉姆', '', '', '<p>设计师</p>', '', '0', '1', '0', '1516864262', '1516874587', '', '', '', '', '', '', '', '', '/uploads/20180125/154810fa029cd02f74ad147a6d3463f7.jpg');
 INSERT INTO `clt_picture` VALUES ('26', '59', '1', 'admin', '梦想改造，筑梦60个孩子的「 家 」', '', '', '<p>疯狂周末的周庄古镇游 点燃了整个夏日！ J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用 J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用 J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用 J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用 J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用J&amp;P 进行一场人与自然与历史的光合作用</p>', '', '0', '1', '0', '1516865424', '0', '/uploads/20180125/7d3c1e072b403c9bfc200c555e240743.jpg;/uploads/20180125/cfc584833e982f854a40c23209e9749e.jpg;/uploads/20180125/c918adeda44bbf48acd640b92be73933.jpg;', '', '', '', '', '', '', '', null);
-INSERT INTO `clt_picture` VALUES ('27', '61', '1', 'admin', 'CONTACT', '', '', '', '', '0', '1', '0', '1516866571', '1516874780', '/uploads/20180125/816609647abfe4ab9fdc67619347d765.jpg;', '', '', '', '', '', '', '', '/uploads/20180125/57171a59eb60256566b9f1401cf758ee.png');
+INSERT INTO `clt_picture` VALUES ('27', '61', '1', 'admin', 'CONTACT', '', '', '', '', '0', '1', '0', '1516866571', '1516935779', '/uploads/20180126/607d79e337446246aa3195139a269386.jpg;', '', '', '', '', '', '', '', '/uploads/20180125/57171a59eb60256566b9f1401cf758ee.png');
 INSERT INTO `clt_picture` VALUES ('28', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516873806', '1516874972', '/uploads/20180125/aecb5ad7598b0fd4724099cf16fcfff2.jpg;/uploads/20180125/a998aca7899edf05aa1cbb3f74bc6f6a.jpg;/uploads/20180125/74e3f8a03468f4bb158a2c84e5ef0982.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/75e57c4447b39eebbac0f4e410eb3da7.jpg');
 INSERT INTO `clt_picture` VALUES ('29', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516874957', '0', '/uploads/20180125/5bb2012806838f7c5497fe320d63897c.jpg;/uploads/20180125/6caf20b4dbc3991391f28a8ac8ff07d5.jpg;/uploads/20180125/17e29f871ebb13d8f8d790dbbfdc024c.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/b5cedfe7b598c623c5e584d3524e105d.jpg');
 INSERT INTO `clt_picture` VALUES ('30', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516875041', '0', '/uploads/20180125/986363c034a40959b34f891e442f7175.jpg;/uploads/20180125/24032957c8a5c99ea7340be0b9c42d8c.jpg;/uploads/20180125/0f60ed2ebe12a61631929149d63322c0.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/e3037d5a6628e14a000527fbf3f8bb33.jpg');
 INSERT INTO `clt_picture` VALUES ('31', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516875110', '0', '/uploads/20180125/3a32335a7f0b92cbefff59acb1355ab9.jpg;/uploads/20180125/02f06d04fa9e6128bde28a079cec7a9c.jpg;/uploads/20180125/8f355cf210ebc4ee77904b6ef3ac3262.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/c2a3d979ddb6198262199202188fa819.jpg');
 INSERT INTO `clt_picture` VALUES ('32', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516875176', '0', '/uploads/20180125/f0ae160811689a6096089f2dc5e77334.jpg;/uploads/20180125/881702cede69d6a408111a4a165e697f.jpg;/uploads/20180125/d1daf593cef816b31b1671569b8df12e.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/c2aa69c6bf2a191dacda567d4979a87e.jpg');
 INSERT INTO `clt_picture` VALUES ('33', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516875284', '0', '/uploads/20180125/3a6e866a6e928ca2aeff2ca9e8b46917.jpg;/uploads/20180125/44e227df58655b6c87ea27ab78b26b8d.jpg;/uploads/20180125/b1ffa75ab721c23324fdb6ed0f840eb6.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180125/b2cb68bf751e5224c910bbcff8e135dd.jpg');
+INSERT INTO `clt_picture` VALUES ('34', '65', '1', 'admin', 'ABOUT US', '', '', '<p>J&amp;P Arch上海李峻設計諮詢有限公司，為香港李峻建築師有限公司於2012年在上海創立的全新子公司。辦公地點設立在上海普陀區。作為專業化的設計機構， J&amp;P Arch在酒店、辦公、商業及住宅專案等設計領域展現出非凡的設計能力，業務涵蓋建築設計、景觀規劃建議、室內設計及配套軟裝設計等，致力於每一個專案的研發並獲得各大發展商的一直好評與認可。</p><p>J&amp;P Arch董事設計總監李峻先生為香港註冊建築師、中華人民共和國一級註冊建築師、及香港建築師學會會員，曾榮獲香港建築師學會青年建築師大獎，香港尖沙咀海濱改造設計冠軍等專業設計獎項。</p><p>J&amp;P Arch亦擁有一群三十餘人思想前衛、創意十足、不拘一格且具有冒險精神的專業設計服務團隊，將國際視角和本土需求完美結合，力求以國際化設計標準提供適應本土需求的專業設計解決方案。</p><p>“追尋臻善完美的生活品質乃永遠的設計目標。”&nbsp; J&amp;P Arch很重視空間設計中的感染力，秉承文化淵源和藝術稟賦，從傳統思想中汲取靈感融入現代化設計理念，追求卓越品質設計。</p>', '', '0', '1', '0', '1516931172', '0', '/uploads/20180126/8ed332df028e703ddf88b85463d23428.png;', 'WORK PROCESS', '<p>J&amp;P作為專業化的建築室內設計團隊，我們保持國際視野並兼顧自身的建築理想與專業精神，堅持高品質原創設計。致力於通過持續創新與深度鑽研，根據客戶的需求和專案定位不斷為其創造出形式與功能完美結合的優秀原創設計作品，為客戶提供高質量的、專業化的研究服務。</p>', '', '', '', '', '', '/uploads/20180126/29a0d945d97250a87403dc1c3c98d3e3.jpg');
+INSERT INTO `clt_picture` VALUES ('35', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516946504', '0', '/uploads/20180126/30ef3bfd805e4a79d5b8484578b4d767.jpg;/uploads/20180126/5fbf5cca636d53c815fdec38188dcebc.jpg;/uploads/20180126/81ce4b78aff623e54c14f8b17f3838f0.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180126/9efe4e9b1fc6926ea350a4ee77bec7b7.jpg');
+INSERT INTO `clt_picture` VALUES ('36', '60', '1', 'admin', '昆山世纪城', '', '', '<p>渊源：从17世纪起，西方就开始崇尚充满异国情调的中国装饰艺术风格，那时欧洲人对中国风商品的痴迷程度，不亚于如今国人对欧美名牌的追捧。整个18世纪是 “中国风”的黄金时代。 项目整体设计重新构建了法式设计元素与中国传统文化的艺术关系，试图打破传统人文艺术理念。 客厅： 客厅为唯一的挑层空间，一幅用现代装饰手法表现的傲骨腊梅在整体的亮白色中悄然绽放。优雅如青花瓷一般的中式背景充斥着整个客厅，丰富的图案主题将中国传统元素完美地融入现代法式设计风格。神秘的孔雀蓝穿插在其中，为整体增添华贵的气质。开放的厨房餐厅营造出空间的延伸与视觉的拓展。 卧室与书房： 卧室书房空间设计以浪漫柔美的古典形式再现，巧妙地结合了中式静谧的思绪。白色的墙体与黑色的斗柜和书桌形成强烈的对比，金色的点缀更是为居室徒增温馨华贵的气质。 儿童房： 相较于客厅与卧室的恢弘大气，儿童房的设计则充满了无限的趣味性。海浪般的棚饰引发无限遐想。</p>', '', '0', '0', '0', '1516946587', '0', '/uploads/20180126/37a9a6cab218a536a70f09ec8b9571db.jpg;/uploads/20180126/dfbb4ddd8aaacfef85a85988088b2b72.jpg;/uploads/20180126/d061b3a379f5995bd10cf43205a8e6db.jpg;', 'CENTURY CITY, KUNSHAN', '', 'kunshan', '2016', 'residential', '中南集团', 'bulid', '/uploads/20180126/d3b0f336738b1b58eb28de0beecf7cb4.jpg');
 
 -- ----------------------------
 -- Table structure for clt_posid

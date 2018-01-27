@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:54:"F:\wamp\www\shanghaiweb/app/home\view\about\index.html";i:1516864150;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\header.html";i:1516862832;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\footer.html";i:1516847159;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:54:"F:\wamp\www\shanghaiweb/app/home\view\about\index.html";i:1516947864;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\header.html";i:1516929341;s:56:"F:\wamp\www\shanghaiweb/app/home\view\common\footer.html";i:1516847159;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +10,13 @@
     <script src="__HOME__/js/lib/swiper.min.js"></script>
     <script src="__HOME__/js/lib/swiper.animate1.0.2.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var uaTest = /Android|webOS|Windows Phone|iPhone|ucweb|ucbrowser|iPod|BlackBerry/i.test(navigator.userAgent.toLowerCase());
+        var touchTest = 'ontouchend' in document;
+        if(uaTest && touchTest){
+            window.location.href = "<?php echo url('mobile/index/index'); ?>";
+        }
+    </script>
 
     
 <link rel="stylesheet" href="__HOME__/css/profile.css">
@@ -88,10 +95,10 @@
                     <?php if(is_array($team) || $team instanceof \think\Collection || $team instanceof \think\Paginator): $i = 0; $__LIST__ = $team;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                         <li class="member hover-item" style="width: 12.5%">
                             <img src="__PUBLIC__<?php echo $vo['thumb']; ?>" alt="" data-scroll-reveal="<?php echo $i; ?>>animate.length?animate[<?php echo $i; ?>%animate.length]:animate[<?php echo $i; ?>-1]">
-                            <div class="info flex-center-vertically">
-                                <p class="name"><?php echo $vo['title']; ?></p>
-                                <p class="position"><?php echo $vo['content']; ?></p>
-                            </div>
+                            <!--<div class="info flex-center-vertically">-->
+                                <!--<p class="name"><?php echo $vo['title']; ?></p>-->
+                                <!--<p class="position"><?php echo $vo['content']; ?></p>-->
+                            <!--</div>-->
                         </li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>

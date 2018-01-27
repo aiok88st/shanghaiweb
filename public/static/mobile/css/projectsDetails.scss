@@ -1,0 +1,81 @@
+body {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: white; }
+header .navBox{
+     background-color: white;
+     padding-bottom: 0.2rem;
+     box-shadow:0 2px 4px rgba(231,231,231,0.5);
+ }
+ footer{
+    position: relative;
+}
+.banner{
+    img{
+        width: 100%;
+    }
+    .swiper-button-prev,.swiper-button-next{
+      background-image: url(../img/left.png);
+      width: 0.31rem;
+      height: 0.56rem; 
+      background-size: 0.31rem 0.56rem; 
+      margin-top: -0.28rem;
+    }
+    .swiper-button-next{
+        transform: rotate(180deg);
+    }
+}
+.message{
+    table{
+        margin: 0.4rem 0;
+        width: 100%;
+        font-size: 0.2rem;
+        tr{
+            border-bottom: 1px solid #424242;
+            height: 0.45rem;
+            td:nth-child(4n+1){
+                width: 22%;
+                p{
+                    border-right: 1px solid #424242;
+                }
+            }
+            td:nth-child(4n+3){
+                width: 22%;
+                p{
+                    border-right: 1px solid #424242;
+                }
+            }
+            td:nth-child(2n){
+                width: 28%;
+                text-indent: 0.2rem;
+                
+            }
+            .noborder{
+                border: 0!important;
+            }
+        }
+        tr:nth-last-child(1){
+            border-bottom: 0px;
+        }
+    }
+}
+.messageContent{
+    .eTitle{
+        font-size: 0.28rem;
+        color: #252525;
+        font-family: "arial narrow";
+        line-height: 0.45rem;
+    }
+    .cTitle{
+        font-size: 0.28rem;
+        color: #252525;
+        line-height: 0.45rem;
+    }
+    .contentBox{
+        padding: 0.2rem 0;
+        font-size: 0.2rem;
+        line-height: 0.45rem;
+    }
+}

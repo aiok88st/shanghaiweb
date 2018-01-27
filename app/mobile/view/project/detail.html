@@ -1,0 +1,76 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/projectsDetails.css" />
+<script type="text/javascript" src="__MOBILE__/js/swiper-3.4.2.min.js" ></script>
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+		<div id="mainImg">
+			 <div class="back box">
+				<ul class="floatr" >
+					<li>
+						<img src="__MOBILE__/img/back.png">
+					</li>
+					<li>
+						<p>BACK</p>
+					</li>
+				</ul>
+				<div class="clearr"></div>
+			</div>
+			<div class="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+                        {volist name="img" id="vo"}
+						<div class="swiper-slide">
+							<img src="__PUBLIC__/{$vo}" />
+						</div>
+                        {/volist}
+
+					</div>
+					<!-- 如果需要导航按钮 -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="message box">
+				<table>
+					<tr>
+						<td><p>LOCATION</p></td>
+						<td><p>{$data.location}</p></td>
+						<td><p>DATE</p></td>
+						<td><p>{$data.date}</p></td>
+					</tr>
+					<tr>
+						<td><p>TYPE</p></td>
+						<td><p>{$data.type}</p></td>
+						<td><p>CLIENTS</p></td>
+						<td><p>{$data.clients}</p></td>
+					</tr>
+					<tr>
+						<td><p>STATUS</p></td>
+						<td><p>{$data.is_status}</p></td>
+						<td><p class="noborder">&nbsp;&nbsp;</p></td>
+						<td><p>&nbsp;&nbsp;</p></td>
+					</tr>
+				</table>
+			</div>
+			<div class="messageContent box">
+				<p class="eTitle">{$data.en_title}</p>
+				<p class="cTitle">{$data.title}</p>
+				<div class="contentBox">
+                    {$data.content}
+				</div>
+
+			</div>
+		</div>
+
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+
+<script type="text/javascript" src="__MOBILE__/js/projectsDetails.js" ></script>
+
+{/block}
+

@@ -1,0 +1,152 @@
+@import url('./reset.css');
+@import url('./swiper.min.css');
+@import url('./animate.min.css');
+@import url('./common.css');
+
+#container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 0!important;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer {
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.footer:hover {
+    height: 110px;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.content #projects {
+    width: 100%;
+    height: 100%;
+}
+
+.content #projects .swiper-wrapper {
+    height: 100%;
+}
+
+.content #projects .swiper-slide {
+    /*height: 50%;*/
+}
+
+.content #projects .swiper-slide .box {
+    display: block;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-size: cover!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.content #projects .swiper-slide .box .introduce {
+    width: 100%;
+    height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-family: Microsoft YaHei;
+}
+
+.content #projects .swiper-slide .box:hover .introduce {
+    height: 100%;
+}
+
+.content #projects .swiper-slide .box .introduce .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.content #projects .swiper-slide .box:hover .introduce .title {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.content #projects .swiper-slide .box .introduce .small-title {
+    font-size: 15px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+
+
+.content #projects .swiper-slide .box:hover .introduce .small-title {
+
+    -webkit-transform: translateX(0%);
+
+    transform: translateX(0%);
+}
+
+.content #projects .swiper-slide .box .introduce .more {
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    margin: auto;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.content #projects .swiper-slide .box:hover .introduce .more {
+
+    bottom: 20px;
+}
+
+.content #projects .swiper-button-next,
+.content #projects .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {}
+
+.swiper-button-next {
+    background-image: url(../images/swiper-button-next.png);
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    z-index: 10;
+    right: 30px;
+}
+
+.swiper-button-prev {
+    background-image: url(../images/swiper-button-prev.png);
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    z-index: 10;
+    left: 30px;
+}

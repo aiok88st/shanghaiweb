@@ -1,0 +1,36 @@
+$navtop:0.25rem;
+$navheight:0.4rem;
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.content{
+    font-size: 0.2rem;
+    line-height: 0.6rem;
+}
+.title{
+    font-size: 0.28rem;
+    font-weight: bold;
+}
+.time{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.content ul li:nth-child(3){
+    margin-bottom: 0.6rem;
+}
+.content img{
+    width: 100%;
+    margin-bottom: 0.25rem;
+}
+.content img:nth-last-child(1){
+    margin-bottom: 0px;
+}
+footer{
+    background-color: transparent;
+}
+body{
+    overflow-x: hidden;
+}

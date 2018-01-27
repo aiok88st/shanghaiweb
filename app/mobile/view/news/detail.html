@@ -1,0 +1,48 @@
+{extend name="common/header" /}
+{block name="headers"}
+<link rel="stylesheet" href="__MOBILE__/css/newsDetails.css" />
+<title>{$info.title}</title>
+{/block}
+{block name="main"}
+
+		<section id="mainContent">
+			<div class="back box">
+				<ul>
+					<li>
+						<img src="__MOBILE__/img/back.png" />
+					</li>
+					<li>
+						<p>BACK</p>
+					</li>
+				</ul>
+			</div>
+			<div class="content box">
+				<ul>
+					<li>
+						<p class="title">{$data.title}</p>
+					</li>
+					<li>
+						<p class="time">{$data.createtime|date="Ym",###}</p>
+					</li>
+					<li>
+                        {$data.content}
+                    </li>
+					<li>
+                        {volist name="img" id="vo"}
+						<img src="__PUBLIC__{$vo}" />
+                        {/volist}
+
+					</li>
+				</ul>
+			</div>
+		</section>
+
+{/block}
+
+{block name="footer"}
+{include file="common/footer" /}
+<script type="text/javascript" src="__MOBILE__/js/scrollReveal.js" ></script>
+<script type="text/javascript" src="__MOBILE__/js/newsDetails.js" ></script>
+
+{/block}
+
